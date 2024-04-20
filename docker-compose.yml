@@ -1,19 +1,14 @@
 version: '3.10'
 
-secrets:
-  postgres_user:
-    file: ./secrets/postgres_user.txt
-  postgres_password:
-    file: ./secrets/postgres_password.txt
-
 services:
-    postgres_db:
-      image: postgres:latest
-      container_name: PostgresCont 
-      restart: always
-      environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres123
-      ports:
-      - '5432:5432'
+  postgres_db:
+    image: postgres:latest
+    container_name: PostgresCont 
+    restart: always
+    environment:
+    - POSTGRES_DB=app_db
+    - POSTGRES_USER=${DB_USER}
+    - POSTGRES_PASSWORD=${DB_PASSWORD}
+    ports:
+    - '5432:5432'
 
