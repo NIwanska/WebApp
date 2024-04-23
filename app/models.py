@@ -8,6 +8,7 @@ class Size(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120), unique=True)
     size_type_id = db.Column(db.Integer, db.ForeignKey("size_type.id"))
+    product = db.relationship("Product", backref="size")
 
 
 class SizeType(db.Model):
@@ -27,6 +28,7 @@ class ProductType(db.Model):
     price = db.Column(db.Float, unique=True)
     img_url = db.Column(db.String(120), unique=True)
     product = db.relationship("Product", backref="product_type")
+    size_type_id = db.Column(db.Integer, db.ForeignKey("size_type.id"))
 
 
 class Product(db.Model):
@@ -43,14 +45,15 @@ class Product(db.Model):
 class CartItem(db.Model):
     __tablename__ = "cart_item"
     id = db.Column(db.Integer, primary_key=True)
+    shoppig_cart_id = db.Column(db.Integer, db.ForeignKey("cart.id"))
     quantity = db.Column(db.Integer)
     product_id = db.Column(db.Integer, db.ForeignKey("product.id"))
-    cart_id = db.Column(db.Integer, db.ForeignKey("cart.id"))
 
 
 class ShoppingCart(db.Model):
     __tablename__ = "cart"
     id = db.Column(db.Integer, primary_key=True)
+    timestamp = db.Column(db.DateTime, default=datetime.datetime.utcnow)
     total = db.Column(db.Float)
     cart_item = db.relationship("CartItem", backref="cart")
     order_id = db.Column(db.Integer, db.ForeignKey("order.id"))
@@ -74,7 +77,6 @@ class Order(db.Model):
     order_status_id = db.Column(db.Integer, db.ForeignKey("order_status.id"))
     delivery_id = db.Column(db.Integer, db.ForeignKey("delivery.id"))
     address_id = db.Column(db.Integer, db.ForeignKey("address.id"))
-    auth_user_id = db.Column(db.Integer, db.ForeignKey("auth_user.id"))
     invoice = db.relationship("Invoice", backref="order")
 
 
@@ -133,6 +135,7 @@ class InvoiceMonthlyReports(db.Model):
 class ProductMonthlyReports(db.Model):
     __tablename__ = "product_monthly_reports"
     id = db.Column(db.Integer, primary_key=True)
+    product_id = db.Column(db.Integer, db.ForeignKey("product.id"))
     month = db.Column(db.String(120))
     year = db.Column(db.Integer)
     count = db.Column(db.Integer)
