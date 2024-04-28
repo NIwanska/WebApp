@@ -1,5 +1,6 @@
 import datetime
 from .database import db
+from flask_login import UserMixin
 
 
 class Size(db.Model):
@@ -93,7 +94,7 @@ class ShoppingCart(db.Model):
     )
 
 
-class AuthUser(db.Model):
+class AuthUser(UserMixin, db.Model):
     __tablename__ = "auth_user"
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(120), unique=True)
