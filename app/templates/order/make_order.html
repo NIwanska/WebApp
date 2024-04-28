@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{%block title %} Order {%endblock%}
+{%block content %}
+
+<div class="container my-5">
+    <h1 class="mb-4">Order Form</h1>
+    <form method="post" action="/submit_order">
+        <div class="form-group">
+            <label for="item">Select Item:</label>
+            <select class="form-control" id="item" name="item">
+                <option value="t-shirt">T-Shirt</option>
+                <option value="pants">Pants</option>
+                <option value="dress">Dress</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="size">Size:</label>
+            <select class="form-control" id="size" name="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" class="form-control" id="quantity" name="quantity" min="1" value="1">
+        </div>
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Place Order</button>
+    </form>
+</div>
+{% endblock %}
