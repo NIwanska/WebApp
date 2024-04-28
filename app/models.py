@@ -1,5 +1,6 @@
 import datetime
 from .database import db
+from flask_login import UserMixin
 
 
 class Size(db.Model):
@@ -7,8 +8,14 @@ class Size(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120), unique=True)
-    size_type_id = db.Column(db.Integer, db.ForeignKey("size_type.id"))
-    product = db.relationship("Product", backref="size")
+    size_type_id = db.Column(
+        db.Integer, db.ForeignKey("size_type.id", ondelete="CASCADE")
+    )
+    product = db.relationship(
+        "Product",
+        backref="size",
+        cascade="all, delete",
+    )
 
 
 class SizeType(db.Model):
@@ -16,7 +23,11 @@ class SizeType(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120), unique=True)
-    size = db.relationship("Size", backref="size_type")
+    size = db.relationship(
+        "Size",
+        backref="size_type",
+        cascade="all, delete",
+    )
 
 
 class ProductType(db.Model):
@@ -27,8 +38,14 @@ class ProductType(db.Model):
     color = db.Column(db.String(120))
     price = db.Column(db.Float, unique=True)
     img_url = db.Column(db.String(120), unique=True)
-    product = db.relationship("Product", backref="product_type")
-    size_type_id = db.Column(db.Integer, db.ForeignKey("size_type.id"))
+    product = db.relationship(
+        "Product",
+        backref="product_type",
+        cascade="all, delete",
+    )
+    size_type_id = db.Column(
+        db.Integer, db.ForeignKey("size_type.id", ondelete="CASCADE")
+    )
 
 
 class Product(db.Model):
@@ -37,17 +54,28 @@ class Product(db.Model):
     name = db.Column(db.String(120), unique=True)
     stock_number = db.Column(db.Integer, unique=True)
     timestamp = db.Column(db.DateTime, default=datetime.datetime.utcnow)
-    size_id = db.Column(db.Integer, db.ForeignKey("size.id"))
-    product_type_id = db.Column(db.Integer, db.ForeignKey("product_type.id"))
-    cart_item = db.relationship("CartItem", backref="product")
+    size_id = db.Column(db.Integer, db.ForeignKey("size.id", ondelete="CASCADE"))
+    product_type_id = db.Column(
+        db.Integer, db.ForeignKey("product_type.id", ondelete="CASCADE")
+    )
+    cart_item = db.relationship(
+        "CartItem",
+        backref="product",
+        cascade="all, delete",
+    )
+    product_monthly_reports = db.relationship(
+        "ProductMonthlyReports", backref="product"
+    )
 
 
 class CartItem(db.Model):
     __tablename__ = "cart_item"
     id = db.Column(db.Integer, primary_key=True)
-    shoppig_cart_id = db.Column(db.Integer, db.ForeignKey("cart.id"))
+    shoppig_cart_id = db.Column(
+        db.Integer, db.ForeignKey("cart.id", ondelete="CASCADE")
+    )
     quantity = db.Column(db.Integer)
-    product_id = db.Column(db.Integer, db.ForeignKey("product.id"))
+    product_id = db.Column(db.Integer, db.ForeignKey("product.id", ondelete="CASCADE"))
 
 
 class ShoppingCart(db.Model):
@@ -55,18 +83,28 @@ class ShoppingCart(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     timestamp = db.Column(db.DateTime, default=datetime.datetime.utcnow)
     total = db.Column(db.Float)
-    cart_item = db.relationship("CartItem", backref="cart")
-    order_id = db.Column(db.Integer, db.ForeignKey("order.id"))
-    auth_user_id = db.Column(db.Integer, db.ForeignKey("auth_user.id"))
+    cart_item = db.relationship(
+        "CartItem",
+        backref="cart",
+        cascade="all, delete",
+    )
+    order = db.relationship("Order", backref="cart")
+    auth_user_id = db.Column(
+        db.Integer, db.ForeignKey("auth_user.id", ondelete="CASCADE")
+    )
 
 
-class AuthUser(db.Model):
+class AuthUser(UserMixin, db.Model):
     __tablename__ = "auth_user"
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(120), unique=True)
     password = db.Column(db.String(120))
     email = db.Column(db.String(120), unique=True)
-    cart = db.relationship("ShoppingCart", backref="auth_user")
+    cart = db.relationship(
+        "ShoppingCart",
+        backref="auth_user",
+        cascade="all, delete",
+    )
 
 
 class Order(db.Model):
@@ -74,10 +112,15 @@ class Order(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     total = db.Column(db.Float)
     datetime = db.Column(db.DateTime, default=datetime.datetime.utcnow)
-    order_status_id = db.Column(db.Integer, db.ForeignKey("order_status.id"))
-    delivery_id = db.Column(db.Integer, db.ForeignKey("delivery.id"))
-    address_id = db.Column(db.Integer, db.ForeignKey("address.id"))
+    order_status_id = db.Column(
+        db.Integer, db.ForeignKey("order_status.id", ondelete="SET NULL")
+    )
+    delivery_id = db.Column(
+        db.Integer, db.ForeignKey("delivery.id", ondelete="SET NULL")
+    )
+    address_id = db.Column(db.Integer, db.ForeignKey("address.id", ondelete="SET NULL"))
     invoice = db.relationship("Invoice", backref="order")
+    cart_id = db.Column(db.Integer, db.ForeignKey("cart.id", ondelete="SET NULL"))
 
 
 class Delivery(db.Model):
@@ -110,7 +153,7 @@ class Invoice(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     total = db.Column(db.Float)
     datetime = db.Column(db.DateTime, default=datetime.datetime.utcnow)
-    order_id = db.Column(db.Integer, db.ForeignKey("order.id"))
+    order_id = db.Column(db.Integer, db.ForeignKey("order.id", ondelete="SET NULL"))
 
 
 class CityMonthlyReports(db.Model):
@@ -135,7 +178,7 @@ class InvoiceMonthlyReports(db.Model):
 class ProductMonthlyReports(db.Model):
     __tablename__ = "product_monthly_reports"
     id = db.Column(db.Integer, primary_key=True)
-    product_id = db.Column(db.Integer, db.ForeignKey("product.id"))
+    product_id = db.Column(db.Integer, db.ForeignKey("product.id", ondelete="SET NULL"))
     month = db.Column(db.String(120))
     year = db.Column(db.Integer)
     count = db.Column(db.Integer)
