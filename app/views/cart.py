@@ -14,7 +14,11 @@ bp = Blueprint(
 @bp.route("/")
 @login_required
 def cart_detail():
-    cart = ShoppingCart.query.filter_by(auth_user_id=current_user.id).first()
+    cart = (
+        ShoppingCart.query.filter_by(auth_user_id=current_user.id)
+        .order_by(ShoppingCart.timestamp.desc())
+        .first()
+    )
     # cart_items = CartItem.query.filter_by(shopping_cart_id=cart.id).all()
     cart_items = (
         db.session.query(CartItem, Product.name, ProductType.price, ProductType.img_url)
