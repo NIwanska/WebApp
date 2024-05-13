@@ -33,6 +33,7 @@ def submit_order():
         city = request.form["city"]
         country = request.form["country"]
         zip_code = request.form["zip_code"]
+
         if not all([street, city, country, zip_code]):
             flash("All address fields are required!")
             return redirect("/order")
@@ -50,11 +51,15 @@ def submit_order():
         .order_by(ShoppingCart.timestamp.desc())
         .first()
     )
+
+    if cart.total is None:
+        flash("Your cart is empty!")
+        return redirect("/cart")
+
     delivery_method_id = request.form["delivery_method_id"]
     order_status_id = 1
     datetime_val = datetime.datetime.now()
     total = cart.total
-
     order = Order(
         address_id=address.id,
         cart_id=cart.id,
