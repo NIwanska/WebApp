@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{%block title %} Products {%endblock%}
+{%block content %}
+<!-- <style>
+    /* Układ strony */
+    .product-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    /* Styl zdjęcia */
+    .product-image {
+        flex: 1;
+        max-width: 30px;
+        max-height: 30px;
+        margin-right: 20px;
+    }
+
+    /* Styl informacji o produkcie */
+    .product-info {
+        flex: 1;
+        margin-left: 20px;
+    }
+
+    /* Styl przycisku */
+    .add-to-cart-button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+</style>
+
+<section class="'product-page">
+<div class="product-container" style="display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 50px;
+align-items: center;
+    text-align: center;">
+    <div class="product-image" style="flex: 50%;
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 20px;">
+        <img src="http://assets.myntassets.com/v1/images/style/properties/6b6acd9a9543e1f1c9c40af34dc1060d_images.jpg" alt="Product Image" 
+        style="flex: 1;max-width: 100%; max-height: 100%; margin-right: 20px">
+    </div>
+    <div class="product-info" style="flex: 50%;
+    margin-left: 20px;">
+        <h2>Product Name</h2>
+        <p>Size: M</p>
+        <p>Price: $XX.XX</p>
+        <button class="add-to-cart-button" style="padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;">Add to</button>
+    </div>
+</div>
+    </section> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="container" style="align-items: center;margin-top: 100px;">
+                <img src="http://assets.myntassets.com/v1/images/style/properties/6b6acd9a9543e1f1c9c40af34dc1060d_images.jpg" alt="Product Image" 
+        style="flex: 1;max-width: 50%; max-height: 50%; margin-left: 250px">
+                <!-- Dodaj treść do kontenera po lewej stronie -->
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="container" style="text-align: center;margin-top: 300px;">
+                <h2>Product Name</h2>
+        <p>Size: M</p>
+        <p>Price: $XX.XX</p>
+        <button class="add-to-cart-button" style="padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;">Add to</button>
+                <!-- Dodaj treść do kontenera po prawej stronie -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+
+{% endblock %}
