@@ -71,7 +71,7 @@ class Product(db.Model):
 class CartItem(db.Model):
     __tablename__ = "cart_item"
     id = db.Column(db.Integer, primary_key=True)
-    shoppig_cart_id = db.Column(
+    shopping_cart_id = db.Column(
         db.Integer, db.ForeignKey("cart.id", ondelete="CASCADE")
     )
     quantity = db.Column(db.Integer)
