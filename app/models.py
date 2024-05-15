@@ -65,7 +65,7 @@ class ProductCategory(db.Model):
 class ProductItem(db.Model):
     __tablename__ = "product_item"
     id = db.Column(db.Integer, primary_key=True)
-    stock_number = db.Column(db.Integer, unique=True)
+    stock_number = db.Column(db.Integer)
     timestamp = db.Column(db.DateTime, default=datetime.datetime.utcnow)
     size_id = db.Column(db.Integer, db.ForeignKey("size.id", ondelete="CASCADE"))
     product_type_id = db.Column(
