@@ -1,5 +1,5 @@
 from flask import render_template, Blueprint
-from ..models import Product
+from ..models import ProductItem
 from flask_login import current_user
 
 bp = Blueprint(
@@ -13,5 +13,5 @@ bp = Blueprint(
 
 @bp.route("/")
 def home():
-    products = Product.query.all()
+    products = ProductItem.query.all()
     return render_template("main/main.html", current_user=current_user)

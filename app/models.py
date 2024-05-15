@@ -11,8 +11,8 @@ class Size(db.Model):
     size_type_id = db.Column(
         db.Integer, db.ForeignKey("size_type.id", ondelete="CASCADE")
     )
-    product = db.relationship(
-        "Product",
+    product_item = db.relationship(
+        "ProductItem",
         backref="size",
         cascade="all, delete",
     )
@@ -34,13 +34,27 @@ class ProductType(db.Model):
     __tablename__ = "product_type"
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(120), unique=True)
+    name = db.Column(db.String(120))
     color = db.Column(db.String(120))
-    price = db.Column(db.Float, unique=True)
-    img_url = db.Column(db.String(120), unique=True)
-    product = db.relationship(
-        "Product",
+    price = db.Column(db.Float)
+    img_url = db.Column(db.String(200), unique=True)
+    product_item = db.relationship(
+        "ProductItem",
         backref="product_type",
+        cascade="all, delete",
+    )
+    product_category_id = db.Column(
+        db.Integer, db.ForeignKey("product_category.id", ondelete="CASCADE")
+    )
+class ProductCategory(db.Model):
+    __tablename__ = "product_category"
+
+    id = db.Column(db.Integer, primary_key=True)
+    subcategory_name = db.Column(db.String(120), unique=True)
+    category_name = db.Column(db.String(120))
+    product_type = db.relationship(
+        "ProductType",
+        backref="product_category",
         cascade="all, delete",
     )
     size_type_id = db.Column(
@@ -48,11 +62,10 @@ class ProductType(db.Model):
     )
 
 
-class Product(db.Model):
-    __tablename__ = "product"
+class ProductItem(db.Model):
+    __tablename__ = "product_item"
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(120), unique=True)
-    stock_number = db.Column(db.Integer, unique=True)
+    stock_number = db.Column(db.Integer)
     timestamp = db.Column(db.DateTime, default=datetime.datetime.utcnow)
     size_id = db.Column(db.Integer, db.ForeignKey("size.id", ondelete="CASCADE"))
     product_type_id = db.Column(
@@ -60,11 +73,11 @@ class Product(db.Model):
     )
     cart_item = db.relationship(
         "CartItem",
-        backref="product",
+        backref="product_item",
         cascade="all, delete",
     )
     product_monthly_reports = db.relationship(
-        "ProductMonthlyReports", backref="product"
+        "ProductMonthlyReports", backref="product_item"
     )
 
 
@@ -75,7 +88,7 @@ class CartItem(db.Model):
         db.Integer, db.ForeignKey("cart.id", ondelete="CASCADE")
     )
     quantity = db.Column(db.Integer)
-    product_id = db.Column(db.Integer, db.ForeignKey("product.id", ondelete="CASCADE"))
+    product_item_id = db.Column(db.Integer, db.ForeignKey("product_item.id", ondelete="CASCADE"))
 
 
 class ShoppingCart(db.Model):
@@ -115,20 +128,20 @@ class Order(db.Model):
     order_status_id = db.Column(
         db.Integer, db.ForeignKey("order_status.id", ondelete="SET NULL")
     )
-    delivery_id = db.Column(
-        db.Integer, db.ForeignKey("delivery.id", ondelete="SET NULL")
+    delivery_method_id = db.Column(
+        db.Integer, db.ForeignKey("delivery_method.id", ondelete="SET NULL")
     )
     address_id = db.Column(db.Integer, db.ForeignKey("address.id", ondelete="SET NULL"))
     invoice = db.relationship("Invoice", backref="order")
     cart_id = db.Column(db.Integer, db.ForeignKey("cart.id", ondelete="SET NULL"))
 
 
-class Delivery(db.Model):
-    __tablename__ = "delivery"
+class DeliveryMethod(db.Model):
+    __tablename__ = "delivery_method"
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120), unique=True)
     price = db.Column(db.Float, unique=True)
-    order = db.relationship("Order", backref="delivery")
+    order = db.relationship("Order", backref="delivery_method")
 
 
 class OrderStatus(db.Model):
@@ -178,7 +191,7 @@ class InvoiceMonthlyReports(db.Model):
 class ProductMonthlyReports(db.Model):
     __tablename__ = "product_monthly_reports"
     id = db.Column(db.Integer, primary_key=True)
-    product_id = db.Column(db.Integer, db.ForeignKey("product.id", ondelete="SET NULL"))
+    product_item_id = db.Column(db.Integer, db.ForeignKey("product_item.id", ondelete="SET NULL"))
     month = db.Column(db.String(120))
     year = db.Column(db.Integer)
     count = db.Column(db.Integer)

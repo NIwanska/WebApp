@@ -1,5 +1,5 @@
 from flask import render_template, Blueprint, request, flash, redirect
-from ..models import Address, db, ShoppingCart, Order, AuthUser, Delivery
+from ..models import Address, db, ShoppingCart, Order, AuthUser, DeliveryMethod
 from flask_login import login_required, current_user
 import datetime
 from ..utils.order_utils import get_saved_address_list, create_new_cart
@@ -17,7 +17,7 @@ bp = Blueprint(
 @login_required
 def index():
     saved_address_list = get_saved_address_list(current_user.id)
-    delivery_methods = db.session.query(Delivery).all()
+    delivery_methods = db.session.query(DeliveryMethod).all()
     return render_template(
         "order/make_order.html",
         saved_address_list=saved_address_list,
@@ -66,7 +66,7 @@ def submit_order():
         total=total,
         datetime=datetime_val,
         order_status_id=order_status_id,
-        delivery_id=delivery_method_id,
+        delivery_method_id=delivery_method_id,
     )
     db.session.add(order)
     db.session.commit()
