@@ -1,4 +1,4 @@
-from ..models import Address, db, ShoppingCart, Order, AuthUser, Delivery
+from ..models import Address, db, ShoppingCart, Order, AuthUser, DeliveryMethod
 import datetime
 
 
