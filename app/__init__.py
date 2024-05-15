@@ -54,9 +54,8 @@ def add_data_to_sqlalchemy():
                     line_count += 1
                 else:
                     line_count += 1
-                    SizeType(id=int(row[0]), name=row[1]) 
-                    print(SizeType.query.first())
-        # db.session.commit()
+                    new_row = SizeType(id=int(row[0]), name=row[1])
+                    db.session.add(new_row) 
 
     if not Size.query.first():
         with open('./csv_db/size.csv') as csv_file:
@@ -67,18 +66,9 @@ def add_data_to_sqlalchemy():
                     line_count += 1
                 else:
                     line_count += 1
-                    Size(id=int(row[0]), name=row[1], size_type_id=int(row[2])) 
+                    new_row = Size(id=int(row[0]), name=row[1], size_type_id=int(row[2])) 
+                    db.session.add(new_row) 
 
-    if not ProductType.query.first():
-        with open('./csv_db/product_type.csv') as csv_file:
-            data = csv.reader(csv_file, delimiter=',')
-            line_count = 0
-            for row in data:
-                if line_count == 0:
-                    line_count += 1
-                else:
-                    line_count += 1
-                    ProductType(id=int(row[0]), name=row[1], color=row[5], price=float(row[2]), img_url=row[3], product_category_id=int(row[4]))
     
     if not ProductCategory.query.first():
         with open('./csv_db/product_category.csv') as csv_file:
@@ -89,7 +79,9 @@ def add_data_to_sqlalchemy():
                     line_count += 1
                 else:
                     line_count += 1
-                    ProductCategory(id=int(row[0]), subcategory_name=row[1], category_name=row[2], size_type_id=int(row[3]))
+                    new_row = ProductCategory(id=int(row[0]), subcategory_name=row[1], category_name=row[2], size_type_id=int(row[3]))
+                    db.session.add(new_row) 
+
     
     if not DeliveryMethod.query.first():
         with open('./csv_db/delivery_method.csv') as csv_file:
@@ -100,7 +92,9 @@ def add_data_to_sqlalchemy():
                     line_count += 1
                 else:
                     line_count += 1
-                    DeliveryMethod(id=int(row[0]), name=row[1], price=float(row[2]))
+                    new_row = DeliveryMethod(id=int(row[0]), name=row[1], price=float(row[2]))
+                    db.session.add(new_row) 
+
     
     if not OrderStatus.query.first():
         with open('./csv_db/order_status.csv') as csv_file:
@@ -111,6 +105,20 @@ def add_data_to_sqlalchemy():
                     line_count += 1
                 else:
                     line_count += 1
-                    OrderStatus(id=int(row[0]), name=row[1])
+                    new_row = OrderStatus(id=int(row[0]), name=row[1])
+                    db.session.add(new_row) 
+                    
+    if not ProductType.query.first():
+        with open('./csv_db/product_type.csv') as csv_file:
+            data = csv.reader(csv_file, delimiter=',')
+            line_count = 0
+            for row in data:
+                if line_count == 0:
+                    line_count += 1
+                else:
+                    line_count += 1
+                    new_row = ProductType(id=int(row[0]), name=row[1], color=row[5], price=float(row[2]), img_url=row[3], product_category_id=int(row[4]))
+                    db.session.add(new_row) 
+
     db.session.commit()
 

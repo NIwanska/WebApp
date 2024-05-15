@@ -37,7 +37,7 @@ product_id,name,price,image,product_category_id,color
 2214,ADIDAS Women Black Socks,118.25,http://assets.myntassets.com/v1/images/style/properties/ed4d4217b5677da240d816885f125914_images.jpg,3,Black
 2216,ADIDAS Women Beige Socks,149.56,http://assets.myntassets.com/v1/images/style/properties/ba7cb4c0169a0589177030f098e69882_images.jpg,3,Beige
 2217,ADIDAS Women Pink Socks,140.87,http://assets.myntassets.com/v1/images/style/properties/54fd5ca8ebf86b59dd1a00631e85f53c_images.jpg,3,Pink
-2244,ADIDAS Women's Black T-shirt,185.11,http://assets.myntassets.com/v1/images/style/properties/683aba986f6883e3a5c64fb97c994342_images.jpg,10,Black
+2244,ADIDAS Women's Black T-shirt 1,185.11,http://assets.myntassets.com/v1/images/style/properties/683aba986f6883e3a5c64fb97c994342_images.jpg,10,Black
 2245,ADIDAS Women White Polo T-shirt,222.44,http://assets.myntassets.com/v1/images/style/properties/54c377631779f9f8397ec9bc503c6576_images.jpg,10,White
 2266,Nike Green Women T-shirt,173.13,http://assets.myntassets.com/v1/images/style/properties/903ce9f3a0e1de71e6998bc5e9c5db7a_images.jpg,10,Green
 2267,Nike Pink Women T-shirt,243.12,http://assets.myntassets.com/v1/images/style/properties/a0477242adbcaa92590a125f01c6943e_images.jpg,10,Pink
@@ -53,12 +53,12 @@ product_id,name,price,image,product_category_id,color
 2294,Nike Women's Miller Top,178.42,http://assets.myntassets.com/v1/images/style/properties/8dc7dbcf65e1676e4987dc2980ee7c4c_images.jpg,8,Multicolor
 2295,Nike Women Cruiser Pink T-shirt,216.27,http://assets.myntassets.com/v1/images/style/properties/5a26b549274c2fbd762161a2c7f4177f_images.jpg,10,Pink
 2297,Nike Women DPT Pink T-shirt,180.77,http://assets.myntassets.com/v1/images/style/properties/485992d1b8de4e30bf91c2adef70be7e_images.jpg,10,Pink
-2299,Nike Women Purple Polo T-shirt,164.64,http://assets.myntassets.com/v1/images/style/properties/6e723b8c24cefc4ebba042d53f55be29_images.jpg,10,Purple
+2299,Nike Women Purple Polo T-shirt 1,164.64,http://assets.myntassets.com/v1/images/style/properties/6e723b8c24cefc4ebba042d53f55be29_images.jpg,10,Purple
 2300,Nike Women Pink Polo T-shirt,185.98,http://assets.myntassets.com/v1/images/style/properties/a69a030fa85fef1fea004add95c4f996_images.jpg,10,Pink
 2302,Nike Women Icon SS White T-shirt,226.88,http://assets.myntassets.com/v1/images/style/properties/f185b45598da063da18ab18299fd022f_images.jpg,10,White
 2303,Nike Women Icon SS Pink T-shirt,216.89,http://assets.myntassets.com/v1/images/style/properties/6d82e1fa1d13ed342c66dff0eb52c5b1_images.jpg,10,Pink
 2305,Nike Women Blue Polo T-shirt,203.38,http://assets.myntassets.com/v1/images/style/properties/903657dc12f6a433a0dbb395c0ed21cd_images.jpg,10,Blue
-2307,Nike Women Purple Polo T-shirt,176.67,http://assets.myntassets.com/v1/images/style/properties/e7a1546df24d647774b07238c388cbdc_images.jpg,10,Purple
+2307,Nike Women Purple Polo T-shirt 2,176.67,http://assets.myntassets.com/v1/images/style/properties/e7a1546df24d647774b07238c388cbdc_images.jpg,10,Purple
 2309,Nike Women Miller Blue T-shirt,189.12,http://assets.myntassets.com/v1/images/style/properties/fd961b045de825d711c588fef4374ba9_images.jpg,10,Blue
 2311,Nike Womens Pink T-shirt,217.74,http://assets.myntassets.com/v1/images/style/properties/fc5b4f218aadfbc62e85f8bc59e70d70_images.jpg,10,Pink
 2313,Nike Womens Green Polo T-shirt,215.02,http://assets.myntassets.com/v1/images/style/properties/a33683fd211d98c0570ed1dff6de5826_images.jpg,10,Green
@@ -255,7 +255,7 @@ product_id,name,price,image,product_category_id,color
 3495,ADIDAS Women Fresh Graphic White T-shirt,226.09,http://assets.myntassets.com/v1/images/style/properties/994acae4b5a14b37395ca66c1b099a43_images.jpg,10,White
 3497,ADIDAS Women Boat Black Icegrey Shoe,198.97,http://assets.myntassets.com/v1/images/style/properties/755a22520605caafbe5c1365d9efeb4b_images.jpg,11,Grey
 3498,ADIDAS Women Adi Light Blue White Shoe,236.92,http://assets.myntassets.com/v1/images/style/properties/0cf1f13e61f222bc253cfbfb98173afc_images.jpg,11,Blue
-3502,ADIDAS Women's Black T-shirt,182.02,http://assets.myntassets.com/v1/images/style/properties/bc3ca4fc5e033feb792aef87100f1a6d_images.jpg,10,Black
+3502,ADIDAS Women's Black T-shirt 2,182.02,http://assets.myntassets.com/v1/images/style/properties/bc3ca4fc5e033feb792aef87100f1a6d_images.jpg,10,Black
 3505,ADIDAS Women Adi Light White Fresh Shoe,122.26,http://assets.myntassets.com/v1/images/style/properties/d0746f8615346b3fda0b4e178eee0f71_images.jpg,11,White
 3506,ADIDAS Women White Royal Silver Shoe,132.34,http://assets.myntassets.com/v1/images/style/properties/e59f190b6952849bd92f1eba3aaad97d_images.jpg,11,White
 3516,Myntra Women's Hero Within White T-shirt,180.13,http://assets.myntassets.com/v1/images/style/properties/944c353543ce13036904623fd12b01a2_images.jpg,10,White
@@ -437,10 +437,10 @@ product_id,name,price,image,product_category_id,color
 4887,Levis Kids Girl's Dana Pink Kidswear,185.93,http://assets.myntassets.com/v1/images/style/properties/25f3ab19c143f7aa7a0dbbaa5e3aebb0_images.jpg,8,Pink
 4888,Levis Kids Girl's Dionne White Teens Kidswear,227.84,http://assets.myntassets.com/v1/images/style/properties/f78d2e1adf8f83fbb192571555e98957_images.jpg,8,White
 4889,Levis Kids Girl's Dionne White Kidswear,206.53,http://assets.myntassets.com/v1/images/style/properties/40b89bcd28169e5c9150b88eb7281d4f_images.jpg,8,White
-4890,Levis Kids Girl's Diaz Pink Polo Tshirt,168.14,http://assets.myntassets.com/v1/images/style/properties/359216ec3c460e56d040c3f92f7530f1_images.jpg,10,Pink
-4891,Levis Kids Girl's Diaz Pink Polo Tshirt,187.69,http://assets.myntassets.com/v1/images/style/properties/975bfc4d93720f17271bbab4ce701401_images.jpg,10,Pink
-4892,Levis Kids Girl's Diaz Green Polo Tshirt,245.31,http://assets.myntassets.com/v1/images/style/properties/75b9d30b27189ca262c34604d12fe5e1_images.jpg,10,Green
-4893,Levis Kids Girl's Diaz Green Polo Tshirt,166.54,http://assets.myntassets.com/v1/images/style/properties/3207d84016dfee6155c122ca36275822_images.jpg,10,Green
+4890,Levis Kids Girl's Diaz Pink Polo Tshirt 1,168.14,http://assets.myntassets.com/v1/images/style/properties/359216ec3c460e56d040c3f92f7530f1_images.jpg,10,Pink
+4891,Levis Kids Girl's Diaz Pink Polo Tshirt 2,187.69,http://assets.myntassets.com/v1/images/style/properties/975bfc4d93720f17271bbab4ce701401_images.jpg,10,Pink
+4892,Levis Kids Girl's Diaz Green Polo Tshirt 1,245.31,http://assets.myntassets.com/v1/images/style/properties/75b9d30b27189ca262c34604d12fe5e1_images.jpg,10,Green
+4893,Levis Kids Girl's Diaz Green Polo Tshirt 2,166.54,http://assets.myntassets.com/v1/images/style/properties/3207d84016dfee6155c122ca36275822_images.jpg,10,Green
 4894,Levis Kids Girl's Darla Pink Teens Kidswear,173.69,http://assets.myntassets.com/v1/images/style/properties/ee36d383a1909b0eba1dc395c9265408_images.jpg,8,Pink
 4895,Levis Kids Girl's Darla Pink Kidswear,217.91,http://assets.myntassets.com/v1/images/style/properties/043e03cb7b96f745026f226e63b85ff6_images.jpg,8,Pink
 4896,Levis Kids Girl's Diane Yellow Teens Kidswear,186.75,http://assets.myntassets.com/v1/images/style/properties/3db85b19743e09b1e78fa91eb74ba0a4_images.jpg,8,Yellow
@@ -495,9 +495,9 @@ product_id,name,price,image,product_category_id,color
 5076,Being Human Women Red Silicon Strap with Stones Watch,133.88,http://assets.myntassets.com/v1/images/style/properties/fff0b1f6e14d832cb5b65a5dbd688aaa_images.jpg,4,Red
 5077,Being Human Women Silicon Strap Blue Watch,109.85,http://assets.myntassets.com/v1/images/style/properties/b0c2181df0be40c75d0b131e055053ca_images.jpg,4,Blue
 5078,Being Human Women Blue Silicon Strap with Stones Watch,143.85,http://assets.myntassets.com/v1/images/style/properties/6779eae5c9595cd06873a3a61cd2e0f2_images.jpg,4,Blue
-5079,Being Human Women White Silicon Strap Stones Watch,146.27,http://assets.myntassets.com/v1/images/style/properties/f501e17e1c6338a6d4e2a426157aae73_images.jpg,4,White
+5079,Being Human Women White Silicon Strap Stones Watch 1,146.27,http://assets.myntassets.com/v1/images/style/properties/f501e17e1c6338a6d4e2a426157aae73_images.jpg,4,White
 5080,Being Human Women White Silicon Strap Watch,132.29,http://assets.myntassets.com/v1/images/style/properties/4a658b5d3700bed3cbbf34a30e9f3124_images.jpg,4,White
-5081,Being Human Women White Silicon Strap Stones Watch,137.69,http://assets.myntassets.com/v1/images/style/properties/f98a4df0b6c21307fbe722157e01292c_images.jpg,4,White
+5081,Being Human Women White Silicon Strap Stones Watch 2,137.69,http://assets.myntassets.com/v1/images/style/properties/f98a4df0b6c21307fbe722157e01292c_images.jpg,4,White
 5103,Reebok Women Easytone Raceon Silver Shoe,269.06,http://assets.myntassets.com/v1/images/style/properties/b0f875cdeee192295a9e86c0b7af4a09_images.jpg,15,Silver
 5108,Wrangler Women Yoke Tucks Check Blue Black Top,166.86,http://assets.myntassets.com/v1/images/style/properties/de6e1f58075724ec4f35201b185ed0a5_images.jpg,8,Blue
 5109,Wrangler Women Long Polka White Red Top,227.38,http://assets.myntassets.com/v1/images/style/properties/9ba5e026006dd9ddb0c1eb56add1ba2f_images.jpg,8,Red
@@ -5254,7 +5254,7 @@ product_id,name,price,image,product_category_id,color
 38612,Nike Women White & Red Striped T-shirt,150.02,http://assets.myntassets.com/v1/images/style/properties/5cab025b62c89c6f608f2a1bc2682280_images.jpg,10,Red
 38625,Nike Women Green Polo T-shirt,173.16,http://assets.myntassets.com/v1/images/style/properties/c5f45438bf56a29f67e987e79a473651_images.jpg,10,Green
 38626,Nike Women Polo Pink Striped T-shirt,226.6,http://assets.myntassets.com/v1/images/style/properties/dd58da4dadf4f0ab45b1fca0384f2cbf_images.jpg,10,Pink
-38630,Nike Women Purple Polo T-shirt,153.57,http://assets.myntassets.com/v1/images/style/properties/206a0614c4644cd8816576efd47d60d8_images.jpg,10,Purple
+38630,Nike Women Purple Polo T-shirt 3,153.57,http://assets.myntassets.com/v1/images/style/properties/206a0614c4644cd8816576efd47d60d8_images.jpg,10,Purple
 38631,Nike Women Pink Polo T-shirt,229.5,http://assets.myntassets.com/v1/images/style/properties/9a9214636fbc2a53f24edd0998ce1ea2_images.jpg,10,Pink
 38652,Nike Women Double Team Lite Black Shoes,194.71,http://assets.myntassets.com/v1/images/style/properties/c12db15b9443c0d5180bfd8ed70cf71e_images.jpg,11,Black
 38656,Nike Women Dual Fusion Grey Sports Shoes,268.6,http://assets.myntassets.com/v1/images/style/properties/ec4c023eb26d8bb866ac1113932dd092_images.jpg,15,Grey

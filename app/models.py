@@ -34,10 +34,10 @@ class ProductType(db.Model):
     __tablename__ = "product_type"
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(120), unique=True)
+    name = db.Column(db.String(120))
     color = db.Column(db.String(120))
-    price = db.Column(db.Float, unique=True)
-    img_url = db.Column(db.String(120), unique=True)
+    price = db.Column(db.Float)
+    img_url = db.Column(db.String(200), unique=True)
     product_item = db.relationship(
         "ProductItem",
         backref="product_type",
