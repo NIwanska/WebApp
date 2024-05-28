@@ -1,31 +1,56 @@
 {% extends "base.html" %}
-{%block title %} Products {%endblock%}
-{%block content %}
-    <!-- Hero Section -->
-    <section class="bg-light p-5">
-        <div class="container text-center">
-            <h1>Welcome to Our Clothing Shop</h1>
-            <p>Discover the latest trends in fashion and shop your favorite looks.</p>
-            <a href="#" class="btn btn-primary">Shop Now</a>
-        </div>
-    </section>
+{% block title %}Home{% endblock %}
 
-    <!-- Featured Products -->
-    <section class="container my-5">
-        <h2 class="text-center mb-4">Featured Products</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product">
-                    <div class="card-body">
-                        <h5 class="card-title">Product Name</h5>
-                        <p class="card-text">Description of the product goes here.</p>
-                        <a href="#" class="btn btn-primary">Buy Now</a>
+{% block content %}
+<div class="row">
+    <!-- Categories Sidebar -->
+    <div class="col-md-3">
+        <div class="list-group">
+            {% for category in categories|groupby('category_name') %}
+            <a href="#category-{{ loop.index }}" class="list-group-item list-group-item-action"
+                data-bs-toggle="collapse">
+                {{ category.grouper }}
+            </a>
+            <div class="collapse" id="category-{{ loop.index }}">
+                {% for subcategory in category.list %}
+                <a href="{{ url_for('main.home', category_id=subcategory.id) }}"
+                    class="list-group-item list-group-item-action ms-3">
+                    {{ subcategory.subcategory_name }}
+                </a>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="col-md-9">
+        <!-- Hero Section -->
+        <section class="bg-light p-5">
+            <div class="container text-center">
+                <h1>Welcome to Our Clothing Shop</h1>
+                <p>Discover the latest trends in fashion and shop your favorite looks.</p>
+                <a href="#" class="btn btn-primary">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="container my-5">
+            <h2 class="text-center mb-4">Featured Products</h2>
+            <div class="row">
+                {% for product in products %}
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="{{ product.img_url }}" class="card-img-top" alt="{{ product.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.name }}</h5>
+                            <a href="{{ url_for('products.product_item', product_id=product.id) }}"
+                                class="btn btn-primary">Buy Now</a>
+                        </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            <!-- Repeat for other products -->
-        </div>
-    </section>
-
+        </section>
+    </div>
+</div>
 {% endblock %}
