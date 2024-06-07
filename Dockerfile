@@ -16,9 +16,9 @@ RUN pip install --upgrade pip && pip install  --no-cache-dir -r pre-requirements
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . /app
+
 EXPOSE 5000
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
-CMD ["flask", "run"]
+CMD ["flask", "run", "--debug"]
