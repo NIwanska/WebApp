@@ -10,6 +10,7 @@ bp = Blueprint(
     static_folder="static",
     url_prefix="/",
 )
+page_limit = 18
 
 @bp.route("/")
 @bp.route("/category/<string:category_name>")
@@ -32,15 +33,15 @@ def home(category_name=None, subcategory_id=None):
         query = query.filter_by(color=color_filter)
 
     total_products = query.count()
-    products = query.offset((page - 1) * 9).limit(9).all()
+    products = query.offset((page - 1) * page_limit).limit(page_limit).all()
 
     colors = ProductType.query.with_entities(distinct(ProductType.color)).order_by(ProductType.color).all()
 
     pagination = {
         'page': page,
-        'per_page': 9,
+        'per_page': page_limit,
         'total': total_products,
-        'pages': (total_products + 9 - 1) // 9,  # number of pages
+        'pages': (total_products + page_limit - 1) // page_limit,  # number of pages
     }
 
     return render_template("main/main.html", 
