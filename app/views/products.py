@@ -1,5 +1,5 @@
 from flask import render_template, Blueprint
-from ..models import ProductType
+from ..models import ProductType, Size, ProductItem, db
 
 bp = Blueprint(
     "products",
@@ -11,14 +11,14 @@ bp = Blueprint(
 
 
 
-# @bp.route('/product/<int:product_id>')
-# def product_item(product_id):
-#     # Logika do pobrania szczegółów produktu na podstawie product_id
-#     return render_template('product_item/product_item.html', product_id=product_id)
-
-
 
 @bp.route("/<int:product_id>")
-def product_item(product_id):
+def product_type(product_id):
     product = ProductType.query.get_or_404(product_id)
-    return render_template("product_item/product_item.html", product=product)
+    sizes = Size.query.filter(Size.id.in_(
+        db.session.query(ProductItem.size_id).filter(
+            ProductItem.product_type_id == product_id,
+            ProductItem.stock_number > 0
+        )
+    )).all()
+    return render_template("product_type/product_type.html", product=product, sizes=sizes)
