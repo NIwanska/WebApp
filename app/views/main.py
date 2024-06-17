@@ -18,6 +18,8 @@ page_limit = 18
 def home(category_name=None, subcategory_id=None):
     page = request.args.get('page', 1, type=int)
     color_filter = request.args.get('color', None)
+    min_price = request.args.get('min_price', None, type=float)
+    max_price = request.args.get('max_price', None, type=float)
 
     categories = ProductCategory.query.order_by(ProductCategory.category_name, ProductCategory.subcategory_name).all()
 
@@ -31,6 +33,10 @@ def home(category_name=None, subcategory_id=None):
         query = query.filter_by(product_category_id=subcategory_id)
     if color_filter:
         query = query.filter_by(color=color_filter)
+    if min_price is not None:
+        query = query.filter(ProductType.price >= min_price)
+    if max_price is not None:
+        query = query.filter(ProductType.price <= max_price)
 
     total_products = query.count()
     products = query.offset((page - 1) * page_limit).limit(page_limit).all()
@@ -52,4 +58,6 @@ def home(category_name=None, subcategory_id=None):
                            pagination=pagination,
                            color_filter=color_filter,
                            category_name=category_name,
-                           subcategory_id=subcategory_id)
+                           subcategory_id=subcategory_id,
+                           min_price=min_price,
+                           max_price=max_price)
