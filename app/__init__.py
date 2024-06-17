@@ -36,6 +36,7 @@ def create_app():
     app.register_blueprint(products.bp)
     app.register_blueprint(auth.bp)
     app.register_blueprint(order.bp)
+    app.jinja_env.globals.update(max=max, min=min)
 
     return app
 

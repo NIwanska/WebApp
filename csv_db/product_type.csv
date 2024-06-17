@@ -106,7 +106,7 @@ product_id,name,price,image,product_category_id,color
 2662,Murcia Women Brocade Bronze Bag,114.87,http://assets.myntassets.com/v1/images/style/properties/f3a52d2cf0e565a3c1b7f413b7b5de02_images.jpg,2,Bronze
 2663,Murcia Women Non Leather Brown Bag,138.04,http://assets.myntassets.com/v1/images/style/properties/046d2aeda85d3666dbed130c84978235_images.jpg,2,Brown
 2664,Murcia   Bag,121.82,http://assets.myntassets.com/v1/images/style/properties/758e08e8edb86a9d10a56c83956804d1_images.jpg,2,Multicolor
-2665,Murcia Women Fancy Cream Hand Bag,136.83,http://assets.myntassets.com/v1/images/style/properties/fc1edf33867a77b8ae5badfcb24e4012_images.jpg,2,beige
+2665,Murcia Women Fancy Cream Hand Bag,136.83,http://assets.myntassets.com/v1/images/style/properties/fc1edf33867a77b8ae5badfcb24e4012_images.jpg,2,Beige
 2666,Murcia Women Casual Tote Grey Bag,136.07,http://assets.myntassets.com/v1/images/style/properties/9bb9c6982996a0544a11ffa06325c10d_images.jpg,2,Grey
 2667,Murcia Women Black Hand Bag,147.48,http://assets.myntassets.com/v1/images/style/properties/8220bc9e14ad40c7d7ff6a4209e9e9cc_images.jpg,2,Black
 2668,Murcia Women Purple Leatherette Bag,127.51,http://assets.myntassets.com/v1/images/style/properties/04d9a3659da8d26386701ad211110b19_images.jpg,2,Purple
@@ -171,7 +171,7 @@ product_id,name,price,image,product_category_id,color
 3066,Tantra Women's Right Now White T-shirt,168.42,http://assets.myntassets.com/v1/images/style/properties/a46c217be304b15c8182a7008832f50f_images.jpg,10,White
 3067,Tantra Women Right Now Grey T-shirt,222.17,http://assets.myntassets.com/v1/images/style/properties/85dc39d3a47f89a10b03e244f157cdbe_images.jpg,10,Grey
 3068,Tantra Women's Hint Lime Green T-shirt,224.78,http://assets.myntassets.com/v1/images/style/properties/346dc1e44b945ed49fdc004a44d8da8b_images.jpg,10,Green
-3069,Tantra Women Cream T-shirt,218.68,http://assets.myntassets.com/v1/images/style/properties/1baa6669fc75260dda7ae0c358eff9a7_images.jpg,10,beige
+3069,Tantra Women Cream T-shirt,218.68,http://assets.myntassets.com/v1/images/style/properties/1baa6669fc75260dda7ae0c358eff9a7_images.jpg,10,Beige
 3070,Tantra Women's Shlokas Green T-shirt,236.46,http://assets.myntassets.com/v1/images/style/properties/19092f1d3e3b5dd7668146d9217e2831_images.jpg,10,Green
 3071,Tantra Women's Shlokas Blue T-shirt,210.6,http://assets.myntassets.com/v1/images/style/properties/21666f6892fc3a7a496abf7c8c6214a5_images.jpg,10,Blue
 3072,Tantra Women's Cut Crap Purple T-shirt,163.73,http://assets.myntassets.com/v1/images/style/properties/0da6da97ed5f56b3ef77afabe273d9ea_images.jpg,10,Purple
@@ -332,7 +332,7 @@ product_id,name,price,image,product_category_id,color
 3971,Jealous 21 Women Purple Basic Top,221.84,http://assets.myntassets.com/v1/images/style/properties/d5f6fcc3abc52a42e22d42971a0f2f8e_images.jpg,8,Purple
 3973,Jealous 21 Women Green Tunic With Mirror Print Top,205.03,http://assets.myntassets.com/v1/images/style/properties/ef1264662943b0b15c654f19180451b9_images.jpg,8,Green
 3974,Jealous 21 Women Blue Tunic With Butterfly Top,205.3,http://assets.myntassets.com/v1/images/style/properties/ba89d57799c1935d00c9034f506e71c1_images.jpg,8,Blue
-3976,Jealous 21 Women Cream Tunic With Mirror Print Top,238.19,http://assets.myntassets.com/v1/images/style/properties/1eccbdaefe3b3fb6cd4989673c15a261_images.jpg,8,beige
+3976,Jealous 21 Women Cream Tunic With Mirror Print Top,238.19,http://assets.myntassets.com/v1/images/style/properties/1eccbdaefe3b3fb6cd4989673c15a261_images.jpg,8,Beige
 3977,Jealous 21 Women Green Tunic Mirror Print Top,241.19,http://assets.myntassets.com/v1/images/style/properties/eca3d9d906de80b2b0634dbb3f3e88b1_images.jpg,8,Green
 4070,Numero Uno Women Canvas Grey Pink Shoe,232.96,http://assets.myntassets.com/v1/images/style/properties/fbc370268fe39abbdb6f3732d49b710a_images.jpg,11,Pink
 4071,Numero Uno Women Canvas Grey Purple Shoe,103.94,http://assets.myntassets.com/v1/images/style/properties/e7eaeb4acecfc1ae8b478663309dd769_images.jpg,11,Purple
@@ -832,25 +832,25 @@ product_id,name,price,image,product_category_id,color
 6860,Forever New Women's Short Black Skirt,220.96,http://assets.myntassets.com/v1/images/style/properties/7c8cb9c499c26b6eaa8170f8f00cb480_images.jpg,6,Black
 6861,Forever New Women Golden Prints Cream Top,247.87,http://assets.myntassets.com/v1/images/style/properties/53823d6a887c587c87e7c33f364ea4cb_images.jpg,8,Gold
 6862,Forever New Women's Peach Pink Skirt,208.22,http://assets.myntassets.com/v1/images/style/properties/d33524b6b0f8ed4f3d2ec51776e6f80f_images.jpg,6,Pink
-6865,Forever New Women Casual Cream Top,222.79,http://assets.myntassets.com/v1/images/style/properties/61a6f36783a58fc0ff0b10114fef2139_images.jpg,8,beige
+6865,Forever New Women Casual Cream Top,222.79,http://assets.myntassets.com/v1/images/style/properties/61a6f36783a58fc0ff0b10114fef2139_images.jpg,8,Beige
 6869,Forever New Women V Neck Printed Blue Top,194.97,http://assets.myntassets.com/v1/images/style/properties/79bc230ec01ddeb9774300b9f831d3cd_images.jpg,8,Blue
 6871,Forever New Women Multi Coloured Top,194.41,http://assets.myntassets.com/v1/images/style/properties/72d995ad22d6396f2d5e8e2ce8d1dd71_images.jpg,8,Red
 6879,Forever New Women Peach Floral Lace Neckline Peach Top,157.85,http://assets.myntassets.com/v1/images/style/properties/a7a3012d1c6fb44e6000b5dd1cff95c4_images.jpg,8,Pink
 6881,Forever New Women Sleeveless Peach Top,217.84,http://assets.myntassets.com/v1/images/style/properties/b02cc79347495d77d3aa232168967461_images.jpg,8,Pink
 6883,Forever New Women Floral Trendy Purple Top,177.86,http://assets.myntassets.com/v1/images/style/properties/b0ad1603dda4b8de61c15a6f66316e7b_images.jpg,8,Purple
-6888,Forever New Women's Cream Floral Print Top,214.54,http://assets.myntassets.com/v1/images/style/properties/a7f16b2eb2b44ed6ca453c5ef69017bc_images.jpg,8,beige
+6888,Forever New Women's Cream Floral Print Top,214.54,http://assets.myntassets.com/v1/images/style/properties/a7f16b2eb2b44ed6ca453c5ef69017bc_images.jpg,8,Beige
 6892,Forever New Women Ditsy Print White Top,249.82,http://assets.myntassets.com/v1/images/style/properties/bdc344051c272ac7b4f6e17fe94db519_images.jpg,8,White
 6894,Forever New Women Floral Multiprint White Top,156.42,http://assets.myntassets.com/v1/images/style/properties/6d82daf4e24bcc7a423d9ecc7e6d12f7_images.jpg,8,White
 6895,Forever New Women Ivory Printed White Top,209.59,http://assets.myntassets.com/v1/images/style/properties/05a8026f1da0f501f1a713536ccfc3b9_images.jpg,8,White
 6896,Forever New Women Black Trouser,224.61,http://assets.myntassets.com/v1/images/style/properties/b83c78ac0381c5f2a591abd43ad3cea3_images.jpg,9,Black
-6898,Forever New Women's Formal Cream Skirt,195.37,http://assets.myntassets.com/v1/images/style/properties/d3f0b6347c090a62625266759e5d278d_images.jpg,6,beige
+6898,Forever New Women's Formal Cream Skirt,195.37,http://assets.myntassets.com/v1/images/style/properties/d3f0b6347c090a62625266759e5d278d_images.jpg,6,Beige
 6901,Tantra Women's Farm Ville Brick Red T-shirt,199.48,http://assets.myntassets.com/v1/images/style/properties/4e84ab4c0b43480e892078842ad5f506_images.jpg,10,Red
 6902,Tantra Women's Road Signs Purple T-shirt,231.87,http://assets.myntassets.com/v1/images/style/properties/e18b3c45df67969c88bbffd9be75dc3f_images.jpg,10,Purple
-6903,Tantra Women's Mudra Cream T-shirt,212.5,http://assets.myntassets.com/v1/images/style/properties/46a22a42fe180b920e5218cc34b13302_images.jpg,10,beige
+6903,Tantra Women's Mudra Cream T-shirt,212.5,http://assets.myntassets.com/v1/images/style/properties/46a22a42fe180b920e5218cc34b13302_images.jpg,10,Beige
 6904,Tantra Women's Cool Orange T-shirt,243.82,http://assets.myntassets.com/v1/images/style/properties/e2040456c7eb9df4fb2cc6c2f65dc5f0_images.jpg,10,Orange
 6905,Tantra Women's Re-incarnation Pink T-shirt,218.32,http://assets.myntassets.com/v1/images/style/properties/db157b57392fac05c72a5bf7dbed439e_images.jpg,10,Pink
 6906,Tantra Women's Cool Red T-shirt,201.25,http://assets.myntassets.com/v1/images/style/properties/8b99b42503570db2a7c146e868648637_images.jpg,10,Red
-6907,Tantra Women's Re-incarnation Cream T-shirt,151.94,http://assets.myntassets.com/v1/images/style/properties/9f1ae80e292e433fa42228fee260260f_images.jpg,10,beige
+6907,Tantra Women's Re-incarnation Cream T-shirt,151.94,http://assets.myntassets.com/v1/images/style/properties/9f1ae80e292e433fa42228fee260260f_images.jpg,10,Beige
 6908,Tantra Women's Rupee Black T-shirt,227.91,http://assets.myntassets.com/v1/images/style/properties/28f2d4fbac47c806f8fc2f146e5950b1_images.jpg,10,Black
 6909,Tantra Women's Page 03 Grey T-shirt,188.15,http://assets.myntassets.com/v1/images/style/properties/bf9d002bbd52db3efb8a8fea2848c5d2_images.jpg,10,Grey
 6910,Tantra Women's Rupee White T-shirt,207.45,http://assets.myntassets.com/v1/images/style/properties/52fa364e1dee0672fdbb11f885c537df_images.jpg,10,White
@@ -1092,8 +1092,8 @@ product_id,name,price,image,product_category_id,color
 8493,Forever New Women Black Skirts,210.22,http://assets.myntassets.com/v1/images/style/properties/4436560b14766d192faddebb37081701_images.jpg,6,Black
 8494,Forever New Women Clay Pleated Beige Skirts,228.78,http://assets.myntassets.com/v1/images/style/properties/135b9776fad74c669c754caaeaad990a_images.jpg,6,Beige
 8495,Forever New Women Cornflower Blue Skirts,233.19,http://assets.myntassets.com/v1/images/style/properties/041baaf12157e9e6dcb4a783248075c4_images.jpg,6,Blue
-8496,Forever New Women Cappuccino Cream Skirts,210.47,http://assets.myntassets.com/v1/images/style/properties/966b6b903b420dd6862aa2c5f6efcb56_images.jpg,6,beige
-8497,Forever New Women Cameo Skirt Cream Skirts,172.56,http://assets.myntassets.com/v1/images/style/properties/153997b1744c5fe253a82324c465e8af_images.jpg,6,beige
+8496,Forever New Women Cappuccino Cream Skirts,210.47,http://assets.myntassets.com/v1/images/style/properties/966b6b903b420dd6862aa2c5f6efcb56_images.jpg,6,Beige
+8497,Forever New Women Cameo Skirt Cream Skirts,172.56,http://assets.myntassets.com/v1/images/style/properties/153997b1744c5fe253a82324c465e8af_images.jpg,6,Beige
 8498,Forever New Women Coral Check Grey Skirts,217.92,http://assets.myntassets.com/v1/images/style/properties/4d78cd8b18d6982dd69aec7ac228989b_images.jpg,6,Grey
 8499,Forever New Women Blossom  Pink Printed Skirt,165.39,http://assets.myntassets.com/v1/images/style/properties/7f24b849f4b3af3dc3f055f501325e15_images.jpg,6,Pink
 8518,Nike Women Nike Purple Tote Purple Bags,125.31,http://assets.myntassets.com/v1/images/style/properties/3b606eecd50aa1307415e9b2b26af80d_images.jpg,2,Purple
@@ -1467,7 +1467,7 @@ product_id,name,price,image,product_category_id,color
 10988,Inkfruit Women Flying Advantures Pink Tshirts,232.15,http://assets.myntassets.com/v1/images/style/properties/6ffab9f4af36cc4e30c8850d66400c31_images.jpg,10,Pink
 10989,Inkfruit Women Mementos Purple Tshirts,236.8,http://assets.myntassets.com/v1/images/style/properties/7205f50c03f7c611827d550adb649eca_images.jpg,10,Purple
 10990,Inkfruit Women Irritating Pink Tshirts,169,http://assets.myntassets.com/v1/images/style/properties/7d4612ec1934b4ec6ca7a076159efb1a_images.jpg,10,Pink
-11008,Inkfruit Women Behind Cream Tshirts,166.04,http://assets.myntassets.com/v1/images/style/properties/7a3e4f2cab50d5b90b2ff16e40815faf_images.jpg,10,beige
+11008,Inkfruit Women Behind Cream Tshirts,166.04,http://assets.myntassets.com/v1/images/style/properties/7a3e4f2cab50d5b90b2ff16e40815faf_images.jpg,10,Beige
 11010,Wrangler Women Smocked Yoke Purple Tops,177.45,http://assets.myntassets.com/v1/images/style/properties/acada18ae143589bc53ca71d305b2091_images.jpg,8,Purple
 11011,Wrangler Women Smocked Yoke Blue Tops,170.57,http://assets.myntassets.com/v1/images/style/properties/7d3585c321b84ca8680a1e4be0b01432_images.jpg,8,Blue
 11012,Wrangler Women Frill Check Multi Tops,172.08,http://assets.myntassets.com/v1/images/style/properties/b9909ee81d9a42504719dc737da0a30e_images.jpg,8,Multicolor
@@ -1655,7 +1655,7 @@ product_id,name,price,image,product_category_id,color
 12580,Tantra Women Blue Printed T-shirt,176.58,http://assets.myntassets.com/v1/images/style/properties/c87b7d295072275718ba6c7a94b03bb7_images.jpg,10,Blue
 12604,Jealous 21 Women Printed Purple Tops,165.76,http://assets.myntassets.com/v1/images/style/properties/7ec5b884291bf8b007960794a6377d03_images.jpg,8,Purple
 12605,Jealous 21 Women Stripes Black Tops,190,http://assets.myntassets.com/v1/images/style/properties/19bc8d30aa8d0809fbfcf9dacfb481ed_images.jpg,8,Black
-12606,Jealous 21 Women Printed Cream Tops,200.7,http://assets.myntassets.com/v1/images/style/properties/c02b76fcc50d42b3218830b6e794a566_images.jpg,8,beige
+12606,Jealous 21 Women Printed Cream Tops,200.7,http://assets.myntassets.com/v1/images/style/properties/c02b76fcc50d42b3218830b6e794a566_images.jpg,8,Beige
 12607,Jealous 21 Women Solid Purple Shrug,164.67,http://assets.myntassets.com/v1/images/style/properties/cdeb9b53930c1fdaaf9cf90d7fb4a4da_images.jpg,8,Purple
 12608,Jealous 21 Women Printed Maroon Tops,232.48,http://assets.myntassets.com/v1/images/style/properties/d2da208bc69686f6fac0a057f0729f00_images.jpg,8,Red
 12610,Jealous 21 Women Printed Purple Tops,237.29,http://assets.myntassets.com/v1/images/style/properties/ce84b5cf81e018dd22e0f94380d7d0a1_images.jpg,8,Purple
@@ -1864,7 +1864,7 @@ product_id,name,price,image,product_category_id,color
 14095,Flying Machine Women Solid Navy Blue Tops,160.64,http://assets.myntassets.com/v1/images/style/properties/41d1a5fd11b5597d49e83204770cf001_images.jpg,8,Blue
 14099,Flying Machine Women Solid Pink Tops,151.2,http://assets.myntassets.com/v1/images/style/properties/1c2d217895f9a1bf02a20b09084491da_images.jpg,8,Pink
 14102,Flying Machine Women Solid Brown Tops,175.06,http://assets.myntassets.com/v1/images/style/properties/a658f5d57feba010f290e44893c25fab_images.jpg,8,Brown
-14103,Flying Machine Women Solid Cream Tops,186.11,http://assets.myntassets.com/v1/images/style/properties/be9f55ed40330678fd78ebcef5857690_images.jpg,10,beige
+14103,Flying Machine Women Solid Cream Tops,186.11,http://assets.myntassets.com/v1/images/style/properties/be9f55ed40330678fd78ebcef5857690_images.jpg,10,Beige
 14104,Flying Machine Women Printed Black Tshirts,177.51,http://assets.myntassets.com/v1/images/style/properties/fc404ad4e2265850635e879580cb95ce_images.jpg,10,Black
 14107,Flying Machine Women Solid Purple Tops,198.04,http://assets.myntassets.com/v1/images/style/properties/aca55fdc767b2dcb46c00c0f9dd31a2d_images.jpg,8,Purple
 14117,Flying Machine Women Washed Blue Jeans,181.74,http://assets.myntassets.com/v1/images/style/properties/d40c7c73da412a997222476cbd9611ab_images.jpg,5,Blue
@@ -2304,7 +2304,7 @@ product_id,name,price,image,product_category_id,color
 18020,Lino Perros Women Printed Red Belt,132.1,http://assets.myntassets.com/v1/images/style/properties/a1290fab0287a2343cb576b49673de83_images.jpg,1,Red
 18021,Lino Perros Women Stripes Pink Belt,102.27,http://assets.myntassets.com/v1/images/style/properties/92349147204ada0eba096861a01a36ec_images.jpg,1,Pink
 18022,Lino Perros Women Stripes White Belt,119.62,http://assets.myntassets.com/v1/images/style/properties/03e83b6d14fdf8568834221fbc4b3c31_images.jpg,1,White
-18023,Lino Perros Women Printed Cream Belt,140.97,http://assets.myntassets.com/v1/images/style/properties/5862f2965a6106fecb9eaf0bc5e0b38c_images.jpg,1,beige
+18023,Lino Perros Women Printed Cream Belt,140.97,http://assets.myntassets.com/v1/images/style/properties/5862f2965a6106fecb9eaf0bc5e0b38c_images.jpg,1,Beige
 18024,Lino Perros Women Solid Black Belt,111.03,http://assets.myntassets.com/v1/images/style/properties/22cc52f140cb1553074310024ffa87bf_images.jpg,1,Black
 18029,Lino Perros Women Printed Grey Black Handbag,108.57,http://assets.myntassets.com/v1/images/style/properties/Lino-Perros-Women-Printed-Grey-Black-Handbag54ed152898a0dc3e59b8bdc75a91bb1d_images.jpg,2,Grey
 18030,Lino Perros Women Printed Camel Handbag,144.23,http://assets.myntassets.com/v1/images/style/properties/7ac4f9d8f97fdde9e9663437c00af947_images.jpg,2,Multicolor
@@ -2370,7 +2370,7 @@ product_id,name,price,image,product_category_id,color
 18717,Arrow Woman Victoria Black Top,226.64,http://assets.myntassets.com/v1/images/style/properties/ec82af4e9b949a45ae963cadd07bfdb2_images.jpg,8,Black
 18718,Arrow Woman Victoria Purple Top,227.2,http://assets.myntassets.com/v1/images/style/properties/3a94d8c0fcd4c5807c9a6c6ea9e70931_images.jpg,8,Purple
 18719,Arrow Women Zebra Grey Top,165.48,http://assets.myntassets.com/v1/images/style/properties/0c299f59526db6416fd0609f83c2a469_images.jpg,8,Grey
-18720,Arrow Women Zebra Cream Top,222.23,http://assets.myntassets.com/v1/images/style/properties/b0fa1faec81ed00dbe00f923dd0e8d22_images.jpg,8,beige
+18720,Arrow Women Zebra Cream Top,222.23,http://assets.myntassets.com/v1/images/style/properties/b0fa1faec81ed00dbe00f923dd0e8d22_images.jpg,8,Beige
 18721,Arrow Women Deerie Pink Top,157.79,http://assets.myntassets.com/v1/images/style/properties/a0d60b191969a47cb828c76b19941992_images.jpg,8,Pink
 18722,Arrow Woman Squirella White Top,161.68,http://assets.myntassets.com/v1/images/style/properties/b12cf2ed286d28394967e5243235125b_images.jpg,8,White
 18732,Arrow Woman Ann Off White Top,194.84,http://assets.myntassets.com/v1/images/style/properties/a31ee0d09d305784b717882eed3d7588_images.jpg,8,White
@@ -2878,7 +2878,7 @@ product_id,name,price,image,product_category_id,color
 21440,Roxy Women Curves Blue Belt,133.94,http://assets.myntassets.com/v1/images/style/properties/Roxy-Women-Curves-Blue-Belt701c4598b7e6102d93a6f82be0801286_images.jpg,1,Blue
 21441,Roxy Women Curves Black Belt,121.09,http://assets.myntassets.com/v1/images/style/properties/Roxy-Women-Curves-Black-Beltac8d1627d2a56848ab9cd14c5bb2e133_images.jpg,1,Black
 21443,Roxy Women Blue T-shirt,221.81,http://assets.myntassets.com/v1/images/style/properties/f7aef19b7fbbda451bd664116ead54fb_images.jpg,10,Blue
-21444,Roxy Women CreamT-shirt,223.96,http://assets.myntassets.com/v1/images/style/properties/d54adbc83dc55afc857f403324b66070_images.jpg,10,beige
+21444,Roxy Women CreamT-shirt,223.96,http://assets.myntassets.com/v1/images/style/properties/d54adbc83dc55afc857f403324b66070_images.jpg,10,Beige
 21445,Roxy Women Printed Grey T-shirt,244.06,http://assets.myntassets.com/v1/images/style/properties/3d9ecbf2160fbf4c64c1f4ff245879e0_images.jpg,10,Grey
 21446,Roxy Women Blue Printed T-shirt,242.2,http://assets.myntassets.com/v1/images/style/properties/4393aa494538f11ce63e89dc49070dad_images.jpg,10,Blue
 21449,Roxy Women Mustard Yellow Top,247.57,http://assets.myntassets.com/v1/images/style/properties/cf83d77d572955acf8ddfc343fea8a6a_images.jpg,8,Yellow
@@ -3100,7 +3100,7 @@ product_id,name,price,image,product_category_id,color
 22309,Inc. 5 Women Casual Golden  Heels,185.8,http://assets.myntassets.com/v1/images/style/properties/30038113bbaa484b37d186d92508e809_images.jpg,13,Gold
 22310,Inc. 5 Women Casual Golden Flats,269.83,http://assets.myntassets.com/v1/images/style/properties/78647fb6d474ff69d4695e36703a606c_images.jpg,13,Gold
 22311,Inc. 5 Women Casual Silver Flats,250.02,http://assets.myntassets.com/v1/images/style/properties/0b967054ee9502c0913ef712449c6350_images.jpg,13,Silver
-22319,Wildcraft Women Cream Kimono Top,200.25,http://assets.myntassets.com/v1/images/style/properties/a2751f9376defa0de3c9dd0e49c3ef21_images.jpg,8,beige
+22319,Wildcraft Women Cream Kimono Top,200.25,http://assets.myntassets.com/v1/images/style/properties/a2751f9376defa0de3c9dd0e49c3ef21_images.jpg,8,Beige
 22321,Wildcraft Women Solid White Tshirt,192.49,http://assets.myntassets.com/v1/images/style/properties/b5cb17ad49b93df68356b0d8555328dd_images.jpg,10,White
 22392,ADIDAS Women Whalf Striper White Top,217.01,http://assets.myntassets.com/v1/images/style/properties/14a0d59953458f475aefe3feda05a59c_images.jpg,8,White
 22393,ADIDAS Women Verve Tee Grey T-shirt,201.62,http://assets.myntassets.com/v1/images/style/properties/bede87d1f39eb0c758332db44c6f4e46_images.jpg,10,Grey
@@ -4042,7 +4042,7 @@ product_id,name,price,image,product_category_id,color
 29495,Giordano Women Chronograph Blue Dial Watch,131.94,http://assets.myntassets.com/v1/images/style/properties/2aea742c136f9ad330894fd0cd720cd1_images.jpg,4,Blue
 29496,Giordano Women White Chronograph Watch,148.59,http://assets.myntassets.com/v1/images/style/properties/3dcc4747fe53b4800e7b3c27a722d101_images.jpg,4,White
 29497,Giordano Women Chronograph Blue Dial Watch,137.67,http://assets.myntassets.com/v1/images/style/properties/83b922bbe5d0b6e64d5d86d5375a37f6_images.jpg,4,Blue
-29498,Giordano Women Cream Dial Watch,130.28,http://assets.myntassets.com/v1/images/style/properties/9cbbb43a58930d76187612466808c267_images.jpg,4,beige
+29498,Giordano Women Cream Dial Watch,130.28,http://assets.myntassets.com/v1/images/style/properties/9cbbb43a58930d76187612466808c267_images.jpg,4,Beige
 29499,Giordano Women Blue Dial Watch,105.12,http://assets.myntassets.com/v1/images/style/properties/f5dd1b0227bcae33a5542794d050b3e2_images.jpg,4,Blue
 29500,Giordano Women Gold Dial Watch,124.71,http://assets.myntassets.com/v1/images/style/properties/ec7b02d446276c9a7d3a7236d95dcdba_images.jpg,4,Gold
 29501,Giordano Women White Dial Watch,125.46,http://assets.myntassets.com/v1/images/style/properties/bdc681b9d3b06871ee74aebee3578b35_images.jpg,4,White
@@ -4347,11 +4347,11 @@ product_id,name,price,image,product_category_id,color
 32807,iPanema Women Ritmos Green Flats,236.9,http://assets.myntassets.com/v1/images/style/properties/319ed9709d12139e9be3dabad87216fa_images.jpg,13,Green
 32808,iPanema Women Ritmos Pink Flats,215.21,http://assets.myntassets.com/v1/images/style/properties/e08767885ebf9907de0aec5d66ad231a_images.jpg,13,Pink
 32809,iPanema Women Ritmos Navy Blue Flats,143.14,http://assets.myntassets.com/v1/images/style/properties/da02d634eb48be1482894e47917ce21d_images.jpg,13,Blue
-32810,iPanema Women Ritmos Cream Flats,257.1,http://assets.myntassets.com/v1/images/style/properties/a94443b4d9d439c9fe555aac5b1d9241_images.jpg,13,beige
+32810,iPanema Women Ritmos Cream Flats,257.1,http://assets.myntassets.com/v1/images/style/properties/a94443b4d9d439c9fe555aac5b1d9241_images.jpg,13,Beige
 32811,iPanema Women Ritmos Orange Flats,206.06,http://assets.myntassets.com/v1/images/style/properties/085b0e8b1dd223d5c869b016892378b7_images.jpg,13,Orange
 32812,iPanema Women Ritmos Black Flats,269.91,http://assets.myntassets.com/v1/images/style/properties/450c993ee4d0bbca5ef5015978d678b7_images.jpg,13,Black
 32813,iPanema Women Ritmos Purple Flats,196.96,http://assets.myntassets.com/v1/images/style/properties/2973d20df2b2c3a9368b64cd0aab623a_images.jpg,13,Purple
-32814,iPanema Women Temas Cream Flip Flops,178.48,http://assets.myntassets.com/v1/images/style/properties/5569dff58ac91f8d1d31cbf49b51c764_images.jpg,12,beige
+32814,iPanema Women Temas Cream Flip Flops,178.48,http://assets.myntassets.com/v1/images/style/properties/5569dff58ac91f8d1d31cbf49b51c764_images.jpg,12,Beige
 32815,iPanema Women Temas Brown Flip Flops,146.59,http://assets.myntassets.com/v1/images/style/properties/2efe9f9ca35e0571033443d3de2fae55_images.jpg,12,Brown
 32816,iPanema Women Temas Pink Flip Flops,295.86,http://assets.myntassets.com/v1/images/style/properties/d2b42feca9038f3e5c8581d4577a82eb_images.jpg,12,Pink
 32817,iPanema Women Temas Black Flip Flops,181.32,http://assets.myntassets.com/v1/images/style/properties/85b58b70f19a26485168dcac7d7cb55f_images.jpg,12,Black
@@ -4388,7 +4388,7 @@ product_id,name,price,image,product_category_id,color
 32901,Allen Solly Woman White Trousers,153.62,http://assets.myntassets.com/v1/images/style/properties/76692af46a4adc8859ac51270e9e311c_images.jpg,9,White
 32939,ADIDAS Neo Women Renewal Black Shoes,257.66,http://assets.myntassets.com/v1/images/style/properties/a669179a661d979396a92147d1abf91f_images.jpg,11,Black
 32940,ADIDAS Neo Women Court White Shoes,201.02,http://assets.myntassets.com/v1/images/style/properties/a271ca290de373614f50caf856e0d4ad_images.jpg,11,White
-33051,Mother Earth Women Printed Cream Top,155.31,http://assets.myntassets.com/v1/images/style/properties/f4c115561b0d1bc955ad96423f5f0455_images.jpg,8,beige
+33051,Mother Earth Women Printed Cream Top,155.31,http://assets.myntassets.com/v1/images/style/properties/f4c115561b0d1bc955ad96423f5f0455_images.jpg,8,Beige
 33086,Catwalk Women Red Flats,275.81,http://assets.myntassets.com/v1/images/style/properties/c83107a94b6e70bd13a0d705e3bab826_images.jpg,13,Red
 33087,Catwalk Women Brown Flats,120.37,http://assets.myntassets.com/v1/images/style/properties/69908424a7ea236e55f6a0ce96894527_images.jpg,13,Brown
 33088,Catwalk Women Gold Flats,145.74,http://assets.myntassets.com/v1/images/style/properties/ca819fc95ae22193255179d3af2981ba_images.jpg,13,Gold
@@ -4472,7 +4472,7 @@ product_id,name,price,image,product_category_id,color
 33219,Sepia Women Grey Top,173.89,http://assets.myntassets.com/v1/images/style/properties/8956fa33133c9cbe4298d587481b6cb4_images.jpg,8,Grey
 33221,Sepia Women Magenta Top,185.4,http://assets.myntassets.com/v1/images/style/properties/3c008af8693e003c57c0022e99458ef6_images.jpg,8,Purple
 33224,Sepia Women Striped Black Top,233.73,http://assets.myntassets.com/v1/images/style/properties/f5e505d485bac48423158259f485b0d0_images.jpg,8,Black
-33227,Sepia Women Cream Top,228.77,http://assets.myntassets.com/v1/images/style/properties/8108166ff027084e35aecf731b95c2ea_images.jpg,8,beige
+33227,Sepia Women Cream Top,228.77,http://assets.myntassets.com/v1/images/style/properties/8108166ff027084e35aecf731b95c2ea_images.jpg,8,Beige
 33369,Baggit Women Gumboot Camlincrush Purple Handbag,116.46,http://assets.myntassets.com/v1/images/style/properties/660a5042147f17045072cd369c47de14_images.jpg,2,Purple
 33370,Baggit Women Gumboot Parinacrush Brown Handbag,137.64,http://assets.myntassets.com/v1/images/style/properties/ed4fabd6b154a73536ae842a7ec49960_images.jpg,2,Brown
 33386,Baggit Women Banjara Taj Purple Handbag,116.12,http://assets.myntassets.com/v1/images/style/properties/ac6e6ac75ed5c182ad4706973e52ea12_images.jpg,2,Purple
@@ -4865,7 +4865,7 @@ product_id,name,price,image,product_category_id,color
 35803,Enroute Women Tan Flats,270.22,http://assets.myntassets.com/v1/images/style/properties/848c22f3e5d4d60231b23006dd66fcdb_images.jpg,13,Brown
 35806,Enroute Women Orange Flats,168.76,http://assets.myntassets.com/v1/images/style/properties/49ca33fcc20e73bb9c025bfc0d8989f7_images.jpg,13,Orange
 35807,Enroute Women Pink Flats,218.51,http://assets.myntassets.com/v1/images/style/properties/c7ce650e7eff37d31c6176972478dbae_images.jpg,13,Pink
-35808,Enroute Women Cream Flats,147.8,http://assets.myntassets.com/v1/images/style/properties/506ee19397284c3db6af415a635a49e1_images.jpg,13,beige
+35808,Enroute Women Cream Flats,147.8,http://assets.myntassets.com/v1/images/style/properties/506ee19397284c3db6af415a635a49e1_images.jpg,13,Beige
 35809,Enroute Women Red Flats,260.09,http://assets.myntassets.com/v1/images/style/properties/5a719cf46ab2fc99fbf6e347f49187d3_images.jpg,13,Red
 35810,Enroute Women Bronze Flats,267.93,http://assets.myntassets.com/v1/images/style/properties/2c27484b1d541b699440c963901eb1a6_images.jpg,13,Bronze
 35811,Enroute Women Gold Flats,236.68,http://assets.myntassets.com/v1/images/style/properties/657a667d8f00823c266c0d39d2d0678b_images.jpg,13,Gold
@@ -4931,14 +4931,14 @@ product_id,name,price,image,product_category_id,color
 36505,United Colors of Benetton Women White Handbag,140.65,http://assets.myntassets.com/v1/images/style/properties/0c7ff49e51d4d38c424924059dd729a3_images.jpg,2,White
 36506,United Colors of Benetton Women Black Bag,110.39,http://assets.myntassets.com/v1/images/style/properties/8e52d81933df64570873efb00d302a9e_images.jpg,2,Black
 36507,United Colors of Benetton Women Grey Bag,138.79,http://assets.myntassets.com/v1/images/style/properties/b7dd0774f8d0a39b2933c7edbc007f62_images.jpg,2,Grey
-36508,United Colors of Benetton Women Cream Handbag,149.49,http://assets.myntassets.com/v1/images/style/properties/97f119a0404a72c3003d0391cd98a47b_images.jpg,2,beige
+36508,United Colors of Benetton Women Cream Handbag,149.49,http://assets.myntassets.com/v1/images/style/properties/97f119a0404a72c3003d0391cd98a47b_images.jpg,2,Beige
 36509,United Colors of Benetton Women Brown Handbag,120.96,http://assets.myntassets.com/v1/images/style/properties/bad05e99069f3152753a630015f8bc1d_images.jpg,2,Brown
 36520,United Colors of Benetton Women White Handbag,125.13,http://assets.myntassets.com/v1/images/style/properties/552d63559974ef2221c5af17b184cb5d_images.jpg,2,White
 36521,United Colors of Benetton Women Orange Handbag,125.59,http://assets.myntassets.com/v1/images/style/properties/5f98cb987bdcf917086e98035568a54a_images.jpg,2,Orange
 36522,United Colors of Benetton Women Black Bag,129.23,http://assets.myntassets.com/v1/images/style/properties/ddb0ad4aae05176c74156b8e7ff23050_images.jpg,2,Black
 36523,United Colors of Benetton Women Pink Bag,116.65,http://assets.myntassets.com/v1/images/style/properties/2a02ec269a6bef8b54b0d298bbbf6500_images.jpg,2,Pink
 36526,United Colors of Benetton Women Black Belt,104.58,http://assets.myntassets.com/v1/images/style/properties/496e0fbe5c490af06228686e28f9441f_images.jpg,1,Black
-36527,United Colors of Benetton Women Cream Belt,133.54,http://assets.myntassets.com/v1/images/style/properties/b739a7ce7de60ba076455ebf2cf7ded3_images.jpg,1,beige
+36527,United Colors of Benetton Women Cream Belt,133.54,http://assets.myntassets.com/v1/images/style/properties/b739a7ce7de60ba076455ebf2cf7ded3_images.jpg,1,Beige
 36532,United Colors of Benetton Women Beige Belt,105.92,http://assets.myntassets.com/v1/images/style/properties/a1d6d6ca2a4d340c6c180d16e161798a_images.jpg,1,Beige
 36536,United Colors of Benetton Women Blue Sling Bag,106.39,http://assets.myntassets.com/v1/images/style/properties/807db6823952f20d542a75afda81ed53_images.jpg,2,Blue
 36614,Catwalk Women Multi-Coloured Heels,189.24,http://assets.myntassets.com/v1/images/style/properties/Catwalk-Women-Multi-Coloured-Sandals_de7739183d4d0c3685a0f9740c2af287_images.jpg,13,Red
@@ -5484,7 +5484,7 @@ product_id,name,price,image,product_category_id,color
 40538,Titan Women White Dial Watch,147.02,http://assets.myntassets.com/v1/images/style/properties/163ea3d7f69f9f7096f219a52a4374fb_images.jpg,4,White
 40539,Titan Women White Dial Watch,140.4,http://assets.myntassets.com/v1/images/style/properties/c85f937fd3d84bfc52f4c7816ca2f4cd_images.jpg,4,White
 40540,Titan Women White Dial Watch,101.66,http://assets.myntassets.com/v1/images/style/properties/9062a4997f29ebc681b8b931d94cd616_images.jpg,4,White
-40541,Titan Women Cream Watch,145.34,http://assets.myntassets.com/v1/images/style/properties/08c2337e3fd01314b8fbf4e6ce7dc448_images.jpg,4,beige
+40541,Titan Women Cream Watch,145.34,http://assets.myntassets.com/v1/images/style/properties/08c2337e3fd01314b8fbf4e6ce7dc448_images.jpg,4,Beige
 40542,Titan Women Gold Watch,101.34,http://assets.myntassets.com/v1/images/style/properties/1ac37239d200c8dd6f99a526acfd0ff9_images.jpg,4,Gold
 40543,Titan Women Silver Dial Watch,112.71,http://assets.myntassets.com/v1/images/style/properties/58dfc312ae94c4b23b57383cf75e865c_images.jpg,4,Silver
 40544,Titan Raga Women Black Dial Watch,138.53,http://assets.myntassets.com/v1/images/style/properties/6223c254c004a464c7c3cd5a45bd4402_images.jpg,4,Black
@@ -5516,7 +5516,7 @@ product_id,name,price,image,product_category_id,color
 40757,Roxy Women Multi Coloured Flip Flops,262.87,http://assets.myntassets.com/v1/images/style/properties/16c1fc4ce35577c4391e0b29f976c9bf_images.jpg,12,Red
 40758,Roxy Women Pink Flip Flops,248.26,http://assets.myntassets.com/v1/images/style/properties/fb22b93df735f355b6c3e36c818e6041_images.jpg,12,Pink
 40759,Roxy Women White Flip Flops,179.39,http://assets.myntassets.com/v1/images/style/properties/76113ddc7401ee0d864b2aacfa48c687_images.jpg,12,White
-41098,Allen Solly Woman Cream Top,223.03,http://assets.myntassets.com/v1/images/style/properties/b602d64d273c258df6c31fe99a558b86_images.jpg,8,beige
+41098,Allen Solly Woman Cream Top,223.03,http://assets.myntassets.com/v1/images/style/properties/b602d64d273c258df6c31fe99a558b86_images.jpg,8,Beige
 41106,Allen Solly Woman Yellow Top,162.7,http://assets.myntassets.com/v1/images/style/properties/e94cae99d9eb302a572d940863cebf8a_images.jpg,8,Yellow
 41131,Allen Solly Woman Light Pink Top,220.73,http://assets.myntassets.com/v1/images/style/properties/964cde81c3ff21aad998c7dc51bdb798_images.jpg,8,Pink
 41144,Allen Solly Woman Pink Top,201.43,http://assets.myntassets.com/v1/images/style/properties/ec0b3715b36e0d661fdb4d7ad6f66b1e_images.jpg,8,Pink
@@ -5551,7 +5551,7 @@ product_id,name,price,image,product_category_id,color
 41408,Wrangler Women Red Stay Gold Tee Top,181.83,http://assets.myntassets.com/v1/images/style/properties/ea4809afbe525be87f964343d0d1f172_images.jpg,8,Red
 41466,Carlton London Women Brown Shoes,175.35,http://assets.myntassets.com/v1/images/style/properties/9544240b2cd14936d6b7ad91fc62454e_images.jpg,11,Brown
 41468,Carlton London Women Olive Shoes,116.52,http://assets.myntassets.com/v1/images/style/properties/7865b6da39b5f2d028c29526dff35423_images.jpg,11,Green
-41469,Carlton London Women Cream Shoes,288.96,http://assets.myntassets.com/v1/images/style/properties/9777d10c0a375cbbdd540e94147ccc12_images.jpg,11,beige
+41469,Carlton London Women Cream Shoes,288.96,http://assets.myntassets.com/v1/images/style/properties/9777d10c0a375cbbdd540e94147ccc12_images.jpg,11,Beige
 41470,Carlton London Women Black Heels,123.65,http://assets.myntassets.com/v1/images/style/properties/e2b5a76abade10755968ba835c58fd5e_images.jpg,13,Black
 41471,Carlton London Women Blue Heels,275.13,http://assets.myntassets.com/v1/images/style/properties/1d1a8822f28389e4595aa32cd75c168b_images.jpg,13,Blue
 41472,Carlton London Women Yellow Heels,208.29,http://assets.myntassets.com/v1/images/style/properties/fa9adfc163ca14f63b7cefe087b8b7d2_images.jpg,13,Yellow
@@ -5750,7 +5750,7 @@ product_id,name,price,image,product_category_id,color
 42854,French Connection Brown Colourblocked Tote Bag,121.72,http://assets.myntassets.com/v1/images/style/properties/a1017c9b8a4c4d75687448be4d5b184d_images.jpg,2,Brown
 42858,French Connection Women Brown Sling Bag,143.39,http://assets.myntassets.com/v1/images/style/properties/dc156cf5bb6f7a00cd8cb19efc88d862_images.jpg,2,Brown
 42859,French Connection Women Brown Alexandra Handbag,125.76,http://assets.myntassets.com/v1/images/style/properties/4a2e204b5b15df87a096ff6b3bd46daf_images.jpg,2,Brown
-42860,French Connection Women Cream Handbag,123.27,http://assets.myntassets.com/v1/images/style/properties/08f8d2c298ce460a0f1f3ccad0826b40_images.jpg,2,beige
+42860,French Connection Women Cream Handbag,123.27,http://assets.myntassets.com/v1/images/style/properties/08f8d2c298ce460a0f1f3ccad0826b40_images.jpg,2,Beige
 42861,French Connection Women Beige Straw Bag,132.97,http://assets.myntassets.com/v1/images/style/properties/d6954bbe985fe6f642cd1a532de04be4_images.jpg,2,Beige
 42865,French Connection Women Black Dorris Handbag,139.86,http://assets.myntassets.com/v1/images/style/properties/507eab02aac07434912fad115416e31f_images.jpg,2,Black
 42867,French Connection Women Black Winter Quilt Cross Sling Bag,124.62,http://assets.myntassets.com/v1/images/style/properties/cd71ff2e97578b42b77491b12b1477f9_images.jpg,2,Black
@@ -5892,8 +5892,8 @@ product_id,name,price,image,product_category_id,color
 43537,French Connection Women Green Top,231.8,http://assets.myntassets.com/v1/images/style/properties/French-Connection-Women-Green-Top_7c9ec969ced00f19851c93da662686f4_images.jpg,8,Green
 43538,French Connection Women Blue Top,204.7,http://assets.myntassets.com/v1/images/style/properties/French-Connection-Women-Blue-Top_1230fe55a5335d7405f43cb5c43b3c90_images.jpg,8,Blue
 43539,French Connection Women Multicoloured Striped Top,205.61,http://assets.myntassets.com/v1/images/style/properties/French-Connection-Women-Multicoloured-Striped-Top_76b9c04beb051d91bdcb7b3aef58b4e8_images.jpg,8,Red
-43554,Puma Women Cream Socks,128.06,http://assets.myntassets.com/v1/images/style/properties/abd2bbee4ec9b85424c4bc5887e145db_images.jpg,3,beige
-43555,Puma Women Cream Socks,137.86,http://assets.myntassets.com/v1/images/style/properties/05f6db0bb7d322a6614505108702cc18_images.jpg,3,beige
+43554,Puma Women Cream Socks,128.06,http://assets.myntassets.com/v1/images/style/properties/abd2bbee4ec9b85424c4bc5887e145db_images.jpg,3,Beige
+43555,Puma Women Cream Socks,137.86,http://assets.myntassets.com/v1/images/style/properties/05f6db0bb7d322a6614505108702cc18_images.jpg,3,Beige
 43556,Puma Women Black Pack of 2 Socks,115.89,http://assets.myntassets.com/v1/images/style/properties/c88c55d48219e1514e4324dcf27a478b_images.jpg,3,Black
 43557,Puma Women White Pack of 2 Socks,126.72,http://assets.myntassets.com/v1/images/style/properties/1e594715e94ed49a859dbb390f0627b4_images.jpg,3,White
 43563,Puma Women Pack of 3 Socks,111.61,http://assets.myntassets.com/v1/images/style/properties/1318bd510d31e837f40ceaa8eb40c680_images.jpg,3,Multicolor
@@ -5920,7 +5920,7 @@ product_id,name,price,image,product_category_id,color
 43647,ONLY Women Blue Top,190.08,http://assets.myntassets.com/v1/images/style/properties/6475a018554d845fce30d1034ca1e25b_images.jpg,8,Blue
 43650,ONLY Women Blue Top,245.78,http://assets.myntassets.com/v1/images/style/properties/28bf9b73257cc217684a224fc2fc67bd_images.jpg,8,Blue
 43651,ONLY Women White Top,201.72,http://assets.myntassets.com/v1/images/style/properties/21373c2284c805135ccb3b67969722e4_images.jpg,8,White
-43654,ONLY Women Cream Printed Top,244.83,http://assets.myntassets.com/v1/images/style/properties/ONLY-Women-Pink-Top_6aa9bda0bb7a2580df150ca6f169728e_images.jpg,8,beige
+43654,ONLY Women Cream Printed Top,244.83,http://assets.myntassets.com/v1/images/style/properties/ONLY-Women-Pink-Top_6aa9bda0bb7a2580df150ca6f169728e_images.jpg,8,Beige
 43661,ONLY Women Brown Top,244.64,http://assets.myntassets.com/v1/images/style/properties/1ad039c5b1de14dc88a29a8901bba6ed_images.jpg,8,Brown
 43662,ONLY Women Purple Top,212.31,http://assets.myntassets.com/v1/images/style/properties/97d18d1c8659f011a92cd6aaa41a8a3d_images.jpg,8,Purple
 43669,ONLY Women Multi Coloured Top,186.56,http://assets.myntassets.com/v1/images/style/properties/a08114abbca2f98cb65b9f364fa8aefd_images.jpg,8,Red
@@ -5954,7 +5954,7 @@ product_id,name,price,image,product_category_id,color
 43939,Catwalk Women Silver Heels,121.24,http://assets.myntassets.com/v1/images/style/properties/ffa81defb9b972ac12b6dac4bb055988_images.jpg,13,Silver
 43940,Catwalk Women Gold Heels,234.06,http://assets.myntassets.com/v1/images/style/properties/85cc7e1aa0c77f9d7effe71d360d200e_images.jpg,13,Gold
 43941,Catwalk Women Brown Heels,205.63,http://assets.myntassets.com/v1/images/style/properties/7817f3dd1333425a8a3d5a7cdd6266a4_images.jpg,13,Brown
-43942,Catwalk Women Cream Heels,170.53,http://assets.myntassets.com/v1/images/style/properties/743bf3778d866f1c71459033917e4bd8_images.jpg,13,beige
+43942,Catwalk Women Cream Heels,170.53,http://assets.myntassets.com/v1/images/style/properties/743bf3778d866f1c71459033917e4bd8_images.jpg,13,Beige
 43943,Catwalk Women Black Heels,104.79,http://assets.myntassets.com/v1/images/style/properties/d10732bbf58c5b99d7e5cda608ca5919_images.jpg,13,Black
 43944,Catwalk Women Golden Heels,101.11,http://assets.myntassets.com/v1/images/style/properties/3b61927df2351feef0fca65e082b66a9_images.jpg,13,Gold
 43945,Catwalk Women Brown Heels,165.39,http://assets.myntassets.com/v1/images/style/properties/9638fcd2eaf0e82d96c2d002f7b31635_images.jpg,13,Brown
@@ -6122,7 +6122,7 @@ product_id,name,price,image,product_category_id,color
 45193,CASIO ENTICER Women Black Dial Analogue Watch A645,130.61,http://assets.myntassets.com/v1/images/style/properties/7f6f226fa96c49a238798b6c660804b4_images.jpg,4,Black
 45194,CASIO ENTICER Women White Dial Analogue Watch A646,143.02,http://assets.myntassets.com/v1/images/style/properties/5354f5ef9fcc1a8c8b75d9e7d24818f1_images.jpg,4,White
 45195,CASIO ENTICER Women Black Dial Analogue Watch A649,144.29,http://assets.myntassets.com/v1/images/style/properties/539226c803f2ccda4872ee6393738940_images.jpg,4,Black
-45196,CASIO ENTICER Women Cream Dial Analogue Watch A651,147.87,http://assets.myntassets.com/v1/images/style/properties/e37d38f844802c9950e64ebd146c8ec1_images.jpg,4,beige
+45196,CASIO ENTICER Women Cream Dial Analogue Watch A651,147.87,http://assets.myntassets.com/v1/images/style/properties/e37d38f844802c9950e64ebd146c8ec1_images.jpg,4,Beige
 45197,CASIO ENTICER Women Black Dial Analogue Watch A652,144.99,http://assets.myntassets.com/v1/images/style/properties/0a447a9eeca70a25cee9dae55728f234_images.jpg,4,Black
 45198,CASIO ENTICER Women White Dial Analogue Watch A653,124.51,http://assets.myntassets.com/v1/images/style/properties/Casio-Women-Sliver-Dial-Watch_33c55c87e5c4e7792bbd48e6316c71da_images.jpg,4,White
 45199,CASIO ENTICER Women Black Dial Analogue Watch A654,122.72,http://assets.myntassets.com/v1/images/style/properties/49351d5ec8e1c83a7d13901e7b7ea010_images.jpg,4,Black
@@ -6295,13 +6295,13 @@ product_id,name,price,image,product_category_id,color
 46095,ADIDAS Women Blue Cherryanda Flip Flops,154.77,http://assets.myntassets.com/v1/images/style/properties/2fa9c1fa5983a2f3524f3692d0cb92a1_images.jpg,12,Blue
 46248,Fusion Beats Women Teal Top,211.03,http://assets.myntassets.com/v1/images/style/properties/47b6ed9f2811ce22acd56739a71e5526_images.jpg,8,Blue
 46256,Fusion Beats Women Black Top,243.46,http://assets.myntassets.com/v1/images/style/properties/bb28e1f8e774e65aca97aedadc7c619f_images.jpg,8,Black
-46258,Fusion Beats Women Cream Top,150.62,http://assets.myntassets.com/v1/images/style/properties/e6b225fdb2273faa759e07bebb290835_images.jpg,8,beige
+46258,Fusion Beats Women Cream Top,150.62,http://assets.myntassets.com/v1/images/style/properties/e6b225fdb2273faa759e07bebb290835_images.jpg,8,Beige
 46262,109F Women Beige Embroidered Top,227.12,http://assets.myntassets.com/v1/images/style/properties/98fd592fa04a11c3e6a1cf3d03c29c79_images.jpg,8,Red
 46267,109F Women Grey Top,210.08,http://assets.myntassets.com/v1/images/style/properties/84a2aac2c68387071af916328dbaa286_images.jpg,8,Grey
 46269,109F Women Blue Top,178.91,http://assets.myntassets.com/v1/images/style/properties/edff5ce9c0a3e4e816829a0b6de47a47_images.jpg,8,Blue
 46270,109F Women Purple Layered Top,220.76,http://assets.myntassets.com/v1/images/style/properties/d25e8f174437fc954ad690f4d59e26e8_images.jpg,8,Red
 46274,109F Women Multicoloured Printed Top,217.11,http://assets.myntassets.com/v1/images/style/properties/f60a2db6641cb0da8385959913745b9a_images.jpg,8,Red
-46276,109F Women Cream Printed Top,192.55,http://assets.myntassets.com/v1/images/style/properties/5e0c64f90bfa041a4feadb0a3726b276_images.jpg,8,beige
+46276,109F Women Cream Printed Top,192.55,http://assets.myntassets.com/v1/images/style/properties/5e0c64f90bfa041a4feadb0a3726b276_images.jpg,8,Beige
 46284,109F Women Black & White Top,177.8,http://assets.myntassets.com/v1/images/style/properties/f50372112fa52a8303e881f25ffbd640_images.jpg,8,White
 46308,Fossil Women White Dial Watch AM4183,146.24,http://assets.myntassets.com/v1/images/style/properties/be6302101b3ea29b13c46259da433233_images.jpg,4,White
 46312,Fossil Women Silver Dial Analog & Chronograph Watch CH2823,131.38,http://assets.myntassets.com/v1/images/style/properties/55bbd8bca3f22b649db4d010bf5c0e7e_images.jpg,4,Silver
@@ -6540,7 +6540,7 @@ product_id,name,price,image,product_category_id,color
 47562,Portia Women White Sandals,288.92,http://assets.myntassets.com/v1/images/style/properties/Portia-Women-White-Sandals_01ec4e4a03fa56dee48db6b82aaa3b6e_images.jpg,13,White
 47563,Portia Women Black Sandals,136.27,http://assets.myntassets.com/v1/images/style/properties/Portia-Women-Black-Sandals_f19a083c3db3802c690af0d3e2b6cbfd_images.jpg,13,Black
 47564,Portia Women Brown Sandals,112.66,http://assets.myntassets.com/v1/images/style/properties/Portia-Women-Brown-Sandals_fde4943f4e9d3390ec813cf42c17f6f1_images.jpg,13,Brown
-47566,Portia Women Cream Slip-Ons,215.72,http://assets.myntassets.com/v1/images/style/properties/Portia-Women-Cream-Women-Sandals_f23261dd06dbbf8c0b6dccf845033267_images.jpg,13,beige
+47566,Portia Women Cream Slip-Ons,215.72,http://assets.myntassets.com/v1/images/style/properties/Portia-Women-Cream-Women-Sandals_f23261dd06dbbf8c0b6dccf845033267_images.jpg,13,Beige
 47567,Portia Women Black Flats,161.8,http://assets.myntassets.com/v1/images/style/properties/Portia-Women-Black-Women-Sandals_959ce0f364cd231d9196110b25ac3806_images.jpg,13,Black
 47568,Portia Women Black Flats,186.13,http://assets.myntassets.com/v1/images/style/properties/Portia-Women-Black-Women-Sandals_2dc1798724a2596e450ec88c35fcf1c0_images.jpg,13,Black
 47569,Portia Women Black Flats,264.76,http://assets.myntassets.com/v1/images/style/properties/Portia-Women-Black-Women-Sandals_67713be11b8483651903d4988f043dd3_images.jpg,13,Black
@@ -6595,7 +6595,7 @@ product_id,name,price,image,product_category_id,color
 47638,Carlton London Women Black Peep Toes,183.28,http://assets.myntassets.com/v1/images/style/properties/bc0b15ce80bffd3b54fe3cb85a53d5e2_images.jpg,13,Black
 47639,Carlton London Women Yellow Peep Toes,242.52,http://assets.myntassets.com/v1/images/style/properties/6bfc37abf0db183ad816e2361d94b50e_images.jpg,13,Yellow
 47640,Carlton London Women Brown Shoes,255.56,http://assets.myntassets.com/v1/images/style/properties/7be41c1af7c72e28b5c561e4a00aa94c_images.jpg,11,Brown
-47641,Carlton London Women Cream Shoes,178.49,http://assets.myntassets.com/v1/images/style/properties/8d1865d347e1a2ef412f86c64afda164_images.jpg,11,beige
+47641,Carlton London Women Cream Shoes,178.49,http://assets.myntassets.com/v1/images/style/properties/8d1865d347e1a2ef412f86c64afda164_images.jpg,11,Beige
 47654,Femella Women Grey Snake Printed Top,170.16,http://assets.myntassets.com/v1/images/style/properties/db88434f4deac0f1990d8303122fc738_images.jpg,8,Grey
 47657,Femella Women Grey Printed Skirt,202.32,http://assets.myntassets.com/v1/images/style/properties/70a37453920595c047be271fd2351f12_images.jpg,6,Grey
 47658,Femella Women Purple & Black Skirt,181.73,http://assets.myntassets.com/v1/images/style/properties/17f505c3c74bc5a7d8510c0db305bb2c_images.jpg,6,Purple
@@ -6718,11 +6718,11 @@ product_id,name,price,image,product_category_id,color
 48500,French Connection Women Blue Jeans,234.95,http://assets.myntassets.com/v1/images/style/properties/French-Connection-Women-Blue-Jeans_c4154bec788d84754c618cdd5a59612e_images.jpg,5,Blue
 48501,French Connection Women Off White Top,158.06,http://assets.myntassets.com/v1/images/style/properties/bd3af154f8b124715d7fba4a49583154_images.jpg,8,White
 48502,French Connection Women Black Top,249.49,http://assets.myntassets.com/v1/images/style/properties/French-Connection-Women-Black-Top_6e53cf2395cea13d4f4411504d399a80_images.jpg,8,Black
-48505,French Connection Women Cream Top,207.66,http://assets.myntassets.com/v1/images/style/properties/3656db716fb7c42ee16482c52f6ddec1_images.jpg,8,beige
+48505,French Connection Women Cream Top,207.66,http://assets.myntassets.com/v1/images/style/properties/3656db716fb7c42ee16482c52f6ddec1_images.jpg,8,Beige
 48506,French Connection Women White Top,246.42,http://assets.myntassets.com/v1/images/style/properties/eb45253662e70becfdfd94470618f1e5_images.jpg,8,White
 48507,French Connection Women Black Top,169.92,http://assets.myntassets.com/v1/images/style/properties/d0caff571fc551677734917dcc979919_images.jpg,8,Black
 48508,French Connection Women Navy Blue & Cream Striped Top,171.2,http://assets.myntassets.com/v1/images/style/properties/c16b17defcbff05df9914b013a9dcb54_images.jpg,8,Blue
-48509,French Connection Women Mauve & Cream Striped Top,157.56,http://assets.myntassets.com/v1/images/style/properties/316a81c13ab278fbe1293f7e3b30e634_images.jpg,8,beige
+48509,French Connection Women Mauve & Cream Striped Top,157.56,http://assets.myntassets.com/v1/images/style/properties/316a81c13ab278fbe1293f7e3b30e634_images.jpg,8,Beige
 48510,French Connection Women Beige & Blue Striped Top,203.67,http://assets.myntassets.com/v1/images/style/properties/fb604f4b1353c1e70942a65e2df3a11a_images.jpg,8,Blue
 48511,French Connection Women Black Top,209.92,http://assets.myntassets.com/v1/images/style/properties/1e1816411552989899be116c9c7a5414_images.jpg,8,Black
 48512,French Connection Women Grey Top,196.99,http://assets.myntassets.com/v1/images/style/properties/451273da30dde9b15d70feb18ece0f3b_images.jpg,8,Grey
@@ -6900,7 +6900,7 @@ product_id,name,price,image,product_category_id,color
 50149,Rocia Women White Flats,105.01,http://assets.myntassets.com/v1/images/style/properties/4984828fc1b32780cf26a5d4d51ebb60_images.jpg,13,White
 50150,Rocia Women Beige Flats,203.88,http://assets.myntassets.com/v1/images/style/properties/11fa994655aaee94d0da10bbee75399a_images.jpg,13,Beige
 50151,Rocia Women Black Flats,184.15,http://assets.myntassets.com/v1/images/style/properties/cb0802870947f21afc958a4e9abfb818_images.jpg,13,Black
-50152,Rocia Women Cream Heels,140.13,http://assets.myntassets.com/v1/images/style/properties/Rocia-Women-Cream-Sandals_4d738304e39f0c465a3cede736096176_images.jpg,13,beige
+50152,Rocia Women Cream Heels,140.13,http://assets.myntassets.com/v1/images/style/properties/Rocia-Women-Cream-Sandals_4d738304e39f0c465a3cede736096176_images.jpg,13,Beige
 50153,Rocia Women Black Heels,110.51,http://assets.myntassets.com/v1/images/style/properties/4fe08fad3fecd6513b0bd9d62389dba6_images.jpg,13,Black
 50154,Rocia Women Beige Leopard Print Heels,231.06,http://assets.myntassets.com/v1/images/style/properties/417159dd18b5fa1d36dcd0f0b6f1e298_images.jpg,13,Beige
 50155,Rocia Women Black Heels,226.74,http://assets.myntassets.com/v1/images/style/properties/7461d6c5cc19f22ed01d5f8959079ed4_images.jpg,13,Black
@@ -7087,7 +7087,7 @@ product_id,name,price,image,product_category_id,color
 51606,Kraus Jeans Women Blue Jeans,235.09,http://assets.myntassets.com/v1/images/style/properties/f0b74ebe862907fc93dfdba32a26f429_images.jpg,5,Blue
 51607,Kraus Jeans Women Black Trousers,170.92,http://assets.myntassets.com/v1/images/style/properties/40213d5bf3dfc25674da609d43899536_images.jpg,9,Black
 51608,Kraus Jeans Women Brown Trousers,177.6,http://assets.myntassets.com/v1/images/style/properties/38578acfc79a5e3bd4f3c707619956d2_images.jpg,9,Brown
-51609,Kraus Jeans Women Cream Trousers,227.23,http://assets.myntassets.com/v1/images/style/properties/78a0a41ad395cd3217d2a4cc5c7fc9ff_images.jpg,9,beige
+51609,Kraus Jeans Women Cream Trousers,227.23,http://assets.myntassets.com/v1/images/style/properties/78a0a41ad395cd3217d2a4cc5c7fc9ff_images.jpg,9,Beige
 51610,Kraus Jeans Women Brown Corduroy Trousers,216.58,http://assets.myntassets.com/v1/images/style/properties/Kraus-Women-Brown-Corduroy_6006b07e944efd9311c6332e77999d88_images.jpg,9,Brown
 51620,Fossil Women Brown Dial Watch ES3090,140.48,http://assets.myntassets.com/v1/images/style/properties/d5166db52aa3875f17bacc26cd1cfef0_images.jpg,4,Brown
 51621,FOSSIL Women White Dial Watch ES3069,117.46,http://assets.myntassets.com/v1/images/style/properties/4357476972847b7cd780b6dd8d36856f_images.jpg,4,White
@@ -7189,7 +7189,7 @@ product_id,name,price,image,product_category_id,color
 52150,Femella Women Green Polo T-Shirt,186.37,http://assets.myntassets.com/v1/images/style/properties/353aa03d97b03afdba9fdd8b00cac677_images.jpg,10,Green
 52151,Femella Women Green Polo T-Shirt,182.2,http://assets.myntassets.com/v1/images/style/properties/c9ddb58de37ba78401b8de63cd6a18ea_images.jpg,10,Green
 52153,Femella Women Green Top,213.02,http://assets.myntassets.com/v1/images/style/properties/954b63e688770683da2e4d10cae1a164_images.jpg,8,Green
-52154,Femella Women Cream Top,224.35,http://assets.myntassets.com/v1/images/style/properties/152c9c946c7aecc7681d8889339ca28e_images.jpg,8,beige
+52154,Femella Women Cream Top,224.35,http://assets.myntassets.com/v1/images/style/properties/152c9c946c7aecc7681d8889339ca28e_images.jpg,8,Beige
 52156,Femella Women Black Summer Cape Top,170.53,http://assets.myntassets.com/v1/images/style/properties/c47e966081f190a7026c18d24e27eb7a_images.jpg,8,Black
 52157,Femella Women Pink Summer Cape Top,237.36,http://assets.myntassets.com/v1/images/style/properties/d4da43ada8294b9256193f6ad6e98690_images.jpg,8,Pink
 52158,Femella Women Off White Summer Cape Top,159.86,http://assets.myntassets.com/v1/images/style/properties/f5ad3ef97cff4d3f1db7a696dbf93a71_images.jpg,8,White
@@ -7364,7 +7364,7 @@ product_id,name,price,image,product_category_id,color
 53706,Kiara Women Grey Handbag,106.61,http://assets.myntassets.com/v1/images/style/properties/Kiara-Women-Grey-Handbag_8d776f3831bf452ad167e6bfc154af85_images.jpg,2,Grey
 53708,Kiara Women Mustard Handbag,133.19,http://assets.myntassets.com/v1/images/style/properties/Kiara-Women-Mustard-Handbag_7bfe51328ac430c891e18663c0675875_images.jpg,2,Yellow
 53710,Kiara Women Green Handbag,116.44,http://assets.myntassets.com/v1/images/style/properties/Kiara-Women-Green-Handbag_461fefa0b86863d84239367c1da2340b_images.jpg,2,Green
-53715,Kiara Women Cream Handbag,112.46,http://assets.myntassets.com/v1/images/style/properties/Kiara-Women-Cream-Handbag_cfb17b66eeca7a76c2c1710201973caf_images.jpg,2,beige
+53715,Kiara Women Cream Handbag,112.46,http://assets.myntassets.com/v1/images/style/properties/Kiara-Women-Cream-Handbag_cfb17b66eeca7a76c2c1710201973caf_images.jpg,2,Beige
 53719,Kiara Women Grey Handbag,147.02,http://assets.myntassets.com/v1/images/style/properties/Kiara-Women-Grey-Handbag_36629bf44a774b9c054715fb84c480cc_images.jpg,2,Grey
 53720,Kiara Women Green Handbag,133.78,http://assets.myntassets.com/v1/images/style/properties/f88d73c0896706100c250bfaf7e9e649_images.jpg,2,Green
 53723,ADIDAS Women White Flip Flops,210.63,http://assets.myntassets.com/v1/images/style/properties/Adidas-Women-White-Flip-Flops_55e8b87c43475e8b9ed7efa80fa3bfcc_images.jpg,12,White
@@ -7423,7 +7423,7 @@ product_id,name,price,image,product_category_id,color
 53994,Kiara Women White Handbag,110.47,http://assets.myntassets.com/v1/images/style/properties/KIARA-Women-White-Handbag_f59648853340417be9bc1a5dd8e9927b_images.jpg,2,White
 53997,Kiara Women Grey Handbag,123.76,http://assets.myntassets.com/v1/images/style/properties/40e840cfff2ccb213b105a48456a53b2_images.jpg,2,Grey
 53999,Kiara Women Black Handbag,105.28,http://assets.myntassets.com/v1/images/style/properties/Kiara-Women-Black-Handbag_0afa9f728980eb48c8def34abd9d75d7_images.jpg,2,Black
-54000,Kiara Women Cream Handbag,112.27,http://assets.myntassets.com/v1/images/style/properties/Kiara-Women-Cream-Handbag_61741a4ccf1e46ad6dea8ddff4cd5da2_images.jpg,2,beige
+54000,Kiara Women Cream Handbag,112.27,http://assets.myntassets.com/v1/images/style/properties/Kiara-Women-Cream-Handbag_61741a4ccf1e46ad6dea8ddff4cd5da2_images.jpg,2,Beige
 54002,Kiara Women Grey Handbag,101.96,http://assets.myntassets.com/v1/images/style/properties/e813938af26271811e9775d64d4a57f3_images.jpg,2,Grey
 54003,Kiara Women Brown Handbag,126.5,http://assets.myntassets.com/v1/images/style/properties/20116e391bdc7ea6c8330e06ed3dee42_images.jpg,2,Brown
 54007,Kiara Women Grey Handbag,122.8,http://assets.myntassets.com/v1/images/style/properties/Kiara-Women-Grey-Handbag_3d6f10aad8cb247d39ea1e6e2c02d6df_images.jpg,2,Grey
@@ -7490,7 +7490,7 @@ product_id,name,price,image,product_category_id,color
 54177,Kiara Women Beige & Yellow Handbag,118.55,http://assets.myntassets.com/v1/images/style/properties/Kiara-Women-Yellow-Handbag_c1dd80180a7878b01a3317764e3b662d_images.jpg,2,Yellow
 54178,Kiara Women Grey Handbag,102.73,http://assets.myntassets.com/v1/images/style/properties/Kiara-Women-Black-Handbag_f1b4fb706449655b122dd27bcec534ff_images.jpg,2,Grey
 54182,Kiara Women Green Handbag,148.35,http://assets.myntassets.com/v1/images/style/properties/Kiara-Women-Green-Handbag_4e2424bca163c7821c90ea5c58c18bcd_images.jpg,2,Green
-54183,Kiara Women Cream Handbag,126.71,http://assets.myntassets.com/v1/images/style/properties/Kiara-Women-Cream-Handbag_5bbc4d084704dd792e61a3396589eac7_images.jpg,2,beige
+54183,Kiara Women Cream Handbag,126.71,http://assets.myntassets.com/v1/images/style/properties/Kiara-Women-Cream-Handbag_5bbc4d084704dd792e61a3396589eac7_images.jpg,2,Beige
 54185,Kiara Women Black Handbag,120.91,http://assets.myntassets.com/v1/images/style/properties/Kiara-Women-Black-Handbag_633cf2c57f98b7850f0b0d3ac4e8fd35_images.jpg,2,Black
 54228,Puma Women Black Sicily Flip Flops,168.3,http://assets.myntassets.com/v1/images/style/properties/3605d64b818ca4bc31f5b19f940a51a4_images.jpg,12,Black
 54229,Puma Women Khaki Handbag,147.36,http://assets.myntassets.com/v1/images/style/properties/5bae14d6b99b7ffd7b01f760d635f4a2_images.jpg,2,Multicolor
@@ -7781,7 +7781,7 @@ product_id,name,price,image,product_category_id,color
 57091,Elle Women Black Skirt,210.73,http://assets.myntassets.com/v1/images/style/properties/Elle-Women-Black-Skirt_90139a8bf131ec0f8079c300deeb805c_images.jpg,6,Black
 57092,Elle Women Off White Skirt,180.99,http://assets.myntassets.com/v1/images/style/properties/Elle-Women-Off-White-Skirt_5803cc0e8d76194513a70fe11fe7e095_images.jpg,6,White
 57100,Elle Women Dark Pink Top,157.69,http://assets.myntassets.com/v1/images/style/properties/Elle-Women-Dark-Pink-Top_ce0e1c18ffc47444dcb28bb7b78ae13f_images.jpg,8,Pink
-57101,Elle Women Cream Top,197.55,http://assets.myntassets.com/v1/images/style/properties/Elle-Women-Cream-Top_0c59338b2dffa014be973dd5d78e0ce5_images.jpg,8,beige
+57101,Elle Women Cream Top,197.55,http://assets.myntassets.com/v1/images/style/properties/Elle-Women-Cream-Top_0c59338b2dffa014be973dd5d78e0ce5_images.jpg,8,Beige
 57102,Elle Women White EssentialsTop,156.24,http://assets.myntassets.com/v1/images/style/properties/Elle-Women-White-EssentialsTop_97c9d458dc1a556f4c6b2452e151a8e6_images.jpg,8,White
 57103,Elle Women Blue Top,194.57,http://assets.myntassets.com/v1/images/style/properties/Elle-Women-Blue-Top_c51705fc6c68666428962c7f6b8ac1df_images.jpg,8,Blue
 57104,Elle Women Red Top,240.49,http://assets.myntassets.com/v1/images/style/properties/Elle-Women-Red-Top_824d84a81630da37d7dba07bb2213c60_images.jpg,8,Red
@@ -7841,7 +7841,7 @@ product_id,name,price,image,product_category_id,color
 57170,Elle Women Black Retro Top,239.82,http://assets.myntassets.com/v1/images/style/properties/Elle-Women-Black-Retro-Top_75548af49558b895401f7c19828ad780_images.jpg,8,Black
 57171,Elle Women Grey Top,177.6,http://assets.myntassets.com/v1/images/style/properties/Elle-Women-Grey-T-shirt_427224dd65da619a4ea12945c9c67469_images.jpg,8,Grey
 57174,Elle Women Dark Pink T-shirt,195.57,http://assets.myntassets.com/v1/images/style/properties/Elle-Women-Red-T-shirt_5f41427ded4dc5e0cda0cf7acbc891e5_images.jpg,10,Pink
-57176,Elle Cream Printed T-shirt,224.57,http://assets.myntassets.com/v1/images/style/properties/Elle-Cream-Printed-T-shirt_ef362f40027dbbcf49d733d35ff366b9_images.jpg,8,beige
+57176,Elle Cream Printed T-shirt,224.57,http://assets.myntassets.com/v1/images/style/properties/Elle-Cream-Printed-T-shirt_ef362f40027dbbcf49d733d35ff366b9_images.jpg,8,Beige
 57191,Elle Women White Top,160.41,http://assets.myntassets.com/v1/images/style/properties/Elle-Women-White-Tunic_dcbfe4f18a308b0e73ed557977aee846_images.jpg,8,White
 57198,Elle Women Multi Coloured Top,176.67,http://assets.myntassets.com/v1/images/style/properties/Elle-Women-Multi-Coloured-Tunic_eeb30727fa5078147b59a846b3ff5818_images.jpg,8,Red
 57209,Kraus Jeans Women Blue Jeans,239.21,http://assets.myntassets.com/v1/images/style/properties/Kraus-Jeans-Women-Blue-Jeans_37360029f613e4f4a7a228762b3ade94_images.jpg,5,Blue
