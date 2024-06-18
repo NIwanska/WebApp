@@ -6,8 +6,8 @@ from flask import (
     url_for,
     flash,
 )
-from ..models import db, AuthUser
-from flask_login import login_user
+from ..models import db, AuthUser, ShoppingCart
+from flask_login import login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
 
@@ -31,10 +31,16 @@ def signup_post():
     username = request.form.get("username")
     password = request.form.get("password")
 
-    user = AuthUser.query.filter_by(email=email).first()
+    user_email = AuthUser.query.filter_by(email=email).first()
+    user_name = AuthUser.query.filter_by(username=username).first()
 
-    if user:
+    if user_email:
+        flash("Email address already exists.")
         return redirect(url_for("auth.signup"))
+    if user_name:    
+        flash("Username already exists.")
+        return redirect(url_for("auth.signup"))
+    
 
     new_user = AuthUser(
         email=email,
@@ -43,6 +49,11 @@ def signup_post():
     )
     db.session.add(new_user)
     db.session.commit()
+    
+    shopping_cart = ShoppingCart(auth_user_id=new_user.id, total=0)
+    db.session.add(shopping_cart)
+    db.session.commit()
+    flash("You have successfully signed up.")
     return redirect(url_for("auth.login"))
 
 
@@ -64,4 +75,11 @@ def login_post():
         return redirect(url_for("auth.login"))
 
     login_user(user, remember=remember)
+    return redirect(url_for("main.home"))
+
+@bp.route("/logout")
+@login_required
+def logout():
+    logout_user()
+    flash("You have been logged out.")
     return redirect(url_for("main.home"))
