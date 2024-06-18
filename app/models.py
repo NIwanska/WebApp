@@ -3,6 +3,8 @@ from .database import db
 from flask_login import UserMixin
 
 
+
+
 class Size(db.Model):
     __tablename__ = "size"
 

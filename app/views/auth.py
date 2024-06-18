@@ -50,9 +50,8 @@ def signup_post():
     db.session.add(new_user)
     db.session.commit()
     
-    shopping_cart = ShoppingCart(auth_user_id=new_user.id, total=0)
-    db.session.add(shopping_cart)
-    db.session.commit()
+    create_shopping_cart(new_user.id)
+
     flash("You have successfully signed up.")
     return redirect(url_for("auth.login"))
 
@@ -83,3 +82,8 @@ def logout():
     logout_user()
     flash("You have been logged out.")
     return redirect(url_for("main.home"))
+
+def create_shopping_cart(user_id):
+    shopping_cart = ShoppingCart(auth_user_id=user_id, total=0)
+    db.session.add(shopping_cart)
+    db.session.commit()
