@@ -1,6 +1,6 @@
 from flask import render_template, Blueprint
 from flask_login import login_required, current_user
-from ..models import CartItem, ShoppingCart, db, ProductItem, ProductType
+from ..models import CartItem, ShoppingCart, db, ProductItem, ProductType, Size
 
 bp = Blueprint(
     "cart",
@@ -21,9 +21,10 @@ def cart_detail():
     )
     # cart_items = CartItem.query.filter_by(shopping_cart_id=cart.id).all()
     cart_items = (
-        db.session.query(CartItem, ProductItem.name, ProductType.price, ProductType.img_url)
+        db.session.query(CartItem, CartItem.quantity, ProductType.name.label('product_name'), ProductType.price, ProductType.img_url, Size.name.label('size_name'))
         .join(ProductItem, ProductItem.id == CartItem.product_item_id)
         .join(ProductType, ProductType.id == ProductItem.product_type_id)
+        .join(Size, Size.id == ProductItem.size_id)
         .filter(
             (CartItem.product_item_id == ProductItem.id) & (CartItem.shopping_cart_id == cart.id)
         )
