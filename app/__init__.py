@@ -6,7 +6,7 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 from .models import SizeType, Size, ProductType, ProductCategory, DeliveryMethod, OrderStatus, ProductItem
 import csv
-
+from . import db_events
 
 
 login_manager = LoginManager()
@@ -37,6 +37,7 @@ def create_app():
     app.register_blueprint(auth.bp)
     app.register_blueprint(order.bp)
     app.jinja_env.globals.update(max=max, min=min)
+    
 
     return app
 
