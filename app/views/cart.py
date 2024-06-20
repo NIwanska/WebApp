@@ -45,7 +45,10 @@ def remove_from_cart():
     cart_item = CartItem.query.filter_by(id=cart_item_id).first()
     
     if cart_item:
-        db.session.delete(cart_item)
+        if cart_item.quantity > 1:
+            cart_item.quantity -= 1
+        else:
+            db.session.delete(cart_item)
         db.session.commit()
         flash("Product removed from cart", "success")
     else:
