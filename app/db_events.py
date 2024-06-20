@@ -66,7 +66,28 @@ def decrease_stock_number(connection, order_id):
         )
         logger.info(f"Decreased stock for product_item_id {item.product_item_id} by {item.quantity}")
 
+
+def create_invoice(connection, order_id):
+    order = connection.execute(
+        db.text("""
+            SELECT id, total, datetime
+            FROM "order"
+            WHERE id = :order_id
+        """),
+        {"order_id": order_id}
+    ).fetchone()
+    
+    connection.execute(
+        db.text("""
+            INSERT INTO invoice (total, datetime, order_id)
+            VALUES (:total, :datetime, :order_id)
+        """),
+        {"total": order.total, "datetime": order.datetime, "order_id": order.id}
+    )
+    logger.info(f"Invoice created for order_id {order_id} with total {order.total}")
+
 @event.listens_for(Order, 'after_insert')
 def after_order_insert(mapper, connection, target):
     logger.info(f"Order created with id: {target.id}")
     decrease_stock_number(connection, target.id)
+    create_invoice(connection, target.id)
