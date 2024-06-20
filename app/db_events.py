@@ -35,4 +35,5 @@ def update_cart_total_direct(connection, shopping_cart_id):
 @event.listens_for(CartItem, 'after_update')
 @event.listens_for(CartItem, 'after_delete')
 def after_cart_item_change(mapper, connection, target):
+    logger.info(f"cart_item_id: {target.id}")
     update_cart_total_direct(connection, target.shopping_cart_id)
