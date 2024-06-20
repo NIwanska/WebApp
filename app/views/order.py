@@ -3,6 +3,7 @@ from ..models import Address, db, ShoppingCart, Order, AuthUser, DeliveryMethod
 from flask_login import login_required, current_user
 import datetime
 from ..utils.order_utils import get_saved_address_list, create_new_cart
+from sqlalchemy import text, bindparam
 
 bp = Blueprint(
     "order",
@@ -72,6 +73,20 @@ def submit_order():
     db.session.commit()
     create_new_cart(current_user.id)
     flash("Order successfull!")
+
+    p_city = address.city
+    p_month = str(datetime_val.month)
+    p_year = datetime_val.year
+    stmt = text("CALL city_reports(:p_city, :p_month, :p_year, :p_total)")
+    stmt = stmt.bindparams(
+        bindparam('p_city', value=p_city),
+        bindparam('p_month', value=p_month),
+        bindparam('p_year', value=p_year),
+        bindparam('p_total', value=total)
+    )
+
+    db.session.execute(stmt)
+    db.session.commit()
 
     return redirect("/order/success")
 
