@@ -6,8 +6,7 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 from .models import SizeType, Size, ProductType, ProductCategory, DeliveryMethod, OrderStatus, ProductItem
 import csv
-from . import db_events
-
+import app.db_events  
 
 login_manager = LoginManager()
 
