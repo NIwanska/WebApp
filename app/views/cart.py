@@ -16,10 +16,9 @@ bp = Blueprint(
 def cart_detail():
     cart = ShoppingCart.query.filter_by(auth_user_id=current_user.id).order_by(ShoppingCart.timestamp.desc()).first()
     if cart is None:
-        cart = ShoppingCart(auth_user_id=current_user.id)
+        cart = ShoppingCart(auth_user_id=current_user.id, total=0)
         db.session.add(cart)
         db.session.commit()
-    # cart_items = CartItem.query.filter_by(shopping_cart_id=cart.id).all()
     cart_items = (
         db.session.query(
             CartItem,
