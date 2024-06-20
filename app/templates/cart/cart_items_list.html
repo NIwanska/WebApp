@@ -18,7 +18,8 @@
             <img src="{{ item.img_url }}" class="img-fluid" alt="{{ item.product_name }}">
         </div>
         <div class="col-md-4">
-            <h5>{{ item.product_name }}</h5>
+            <h5><a href="{{ url_for('products.product_type', product_id=item.product_id) }}">{{ item.product_name }}</a>
+            </h5>
         </div>
         <div class="col-md-2">
             <p>${{ item.price }}</p>

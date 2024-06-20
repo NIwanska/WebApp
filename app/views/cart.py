@@ -26,6 +26,7 @@ def cart_detail():
             ProductType.name.label("product_name"),
             ProductType.price,
             ProductType.img_url,
+            ProductType.id.label("product_id"),
             Size.name.label("size_name"),
         )
         .join(ProductItem, ProductItem.id == CartItem.product_item_id)
