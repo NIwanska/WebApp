@@ -1,6 +1,8 @@
 from sqlalchemy import event
 from sqlalchemy.orm import Session
-from .models import ShoppingCart, CartItem, Order, Invoice, db
+from .models import ShoppingCart, CartItem, Order, Invoice
+from sqlalchemy import text, bindparam
+import datetime
 
 @event.listens_for(Session, 'after_flush')
 def update_cart_total(session, flush_context):
@@ -27,3 +29,12 @@ def create_invoice_after_order_insert(mapper, connection, target):
             order_id=target.id
         )
     )
+    datetime_val = datetime.datetime.now()
+    stmt_invoice = text("CALL invoice_reports(:p_month, :p_year, :p_total)")
+    stmt_invoice = stmt_invoice.bindparams(
+        # bindparam('p_month', value=str(datetime_val.month)),
+        bindparam('p_month', value='7'),
+        bindparam('p_year', value=datetime_val.year),
+        bindparam('p_total', value=target.total)
+    )
+    connection.execute(stmt_invoice)

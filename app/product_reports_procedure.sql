@@ -16,10 +16,6 @@ DECLARE
     v_count INTEGER;
     v_total INTEGER;
 BEGIN
-
-    -- INSERT INTO product_monthly_reports (id, product_item_id, month, year, count, total)
-    --     VALUES (DEFAULT, p_product_id, p_month, p_year, p_count, p_total);
-
     SELECT id, count, total
     INTO v_id, v_count, v_total
     FROM product_monthly_reports
