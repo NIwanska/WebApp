@@ -1,6 +1,6 @@
 from sqlalchemy import event
 from sqlalchemy.orm import Session
-from .models import ShoppingCart, CartItem, db
+from .models import ShoppingCart, CartItem, Order, Invoice, db
 
 @event.listens_for(Session, 'after_flush')
 def update_cart_total(session, flush_context):
@@ -17,3 +17,13 @@ def update_cart_total_amount(session, cart_id):
         total = sum(item.quantity * item.product_item.product_type.price for item in cart.cart_item)
         cart.total = total
         session.add(cart)
+
+
+@event.listens_for(Order, 'after_insert')
+def create_invoice_after_order_insert(mapper, connection, target):
+    connection.execute(
+        Invoice.__table__.insert().values(
+            total=target.total,
+            order_id=target.id
+        )
+    )

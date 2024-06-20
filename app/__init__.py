@@ -21,7 +21,7 @@ def create_app():
     with app.app_context():
         db.create_all()
         print("Db created")
-        # add_data_to_sqlalchemy()
+        add_data_to_sqlalchemy()
 
     login_manager.init_app(app)
     from .models import AuthUser
