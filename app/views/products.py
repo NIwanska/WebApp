@@ -33,7 +33,7 @@ def add_to_cart():
     
     product_item = ProductItem.query.filter_by(product_type_id=product_id, size_id=size_id).first_or_404()
 
-    shopping_cart = ShoppingCart.query.filter_by(auth_user_id=current_user.id).first()
+    shopping_cart = ShoppingCart.query.filter_by(auth_user_id=current_user.id).order_by(ShoppingCart.timestamp.desc()).first()
 
     cart_item = CartItem.query.filter_by(shopping_cart_id=shopping_cart.id, product_item_id=product_item.id).first()
     if cart_item:
