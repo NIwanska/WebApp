@@ -15,15 +15,9 @@
 <div class="container my-5">
         <h2 class="mb-3">Clothing Store Order Form</h2>
         <form action="{{url_for('order.submit_order')}}" method="POST">
-            
-            {% if saved_address_list %}
-            <div class="mb-3">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="use_saved_address" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Use previously saved address
-                    </label>
-                </div>
+             <input type="hidden" id="addressFromHistory" name="address_from_history" value="false">
+
+            <div class="mb-3" id="historyAddressForm" {% if not saved_address_list %} style="display: none;" {% endif %}>
 
                 <label for="addressSelect" class="form-label">Choose a saved address:</label>
                 <select name="saved_address_select" class="form-select" id="addressSelect">
@@ -31,10 +25,12 @@
                     <option value="{{address.id}}">{{address.street}}, {{address.city}}, {{address.country}}</option>
                     {% endfor %}
                 </select>
+                <br>
+                <a class="btn btn-secondary btn-small  " onclick="refreshAddressForm()">Add new address</a>
             </div>
-            {% endif %}
+
             
-            <div class="mb-3" id="newAddresses">
+            <div class="mb-3" id="newAddressesForm">
                 <label class="form-label">Add a new address:</label>
                 <div class="input-group mb-3">
                     <input name="street" type="text" class="form-control" placeholder="Street">
@@ -42,6 +38,7 @@
                     <input name="country" type="text" class="form-control" placeholder="Country">
                     <input name="zip_code" type="text" class="form-control" placeholder="Zip Code">
                 </div>
+                <a class="btn btn-secondary" onclick="refreshAddressForm()">Use address from history</a>
             </div>
 
             <div class="mb-3">
@@ -52,8 +49,37 @@
                     {% endfor %}
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Submit Order</button>
+            <button id="submitOrderBtn" type="submit" class="btn btn-primary">Submit Order</button>
         </form>
     </div>
+
+<script>
+
+var fromHistory = false;
+
+function refreshAddressForm() {
+    if (fromHistory) {
+        document.getElementById('newAddressesForm').style.display = 'block';
+        document.getElementById('historyAddressForm').style.display = 'none';
+        fromHistory = false;
+        var hiddenField = document.getElementById("addressFromHistory").value = fromHistory;
+    } else {
+        document.getElementById('newAddressesForm').style.display = 'none';
+        document.getElementById('historyAddressForm').style.display = 'block';
+        fromHistory = true;
+        var hiddenField = document.getElementById("addressFromHistory").value = fromHistory;
+    }
+}
+
+
+function setFromHistoryTrue() {
+    fromHistory = true;
+}
+function setFromHistoryFalse() {
+    fromHistory = false;
+}
+</script>
+
+{% if saved_address_list %} <script> refreshAddressForm() </script> {% endif %}
 
 {% endblock %}

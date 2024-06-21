@@ -1,6 +1,7 @@
 from flask import render_template, Blueprint, request, flash, redirect
 from ..models import Address, db, ShoppingCart, Order, AuthUser, DeliveryMethod, CartItem, ProductItem
 from flask_login import login_required, current_user
+import logging
 import datetime
 from ..utils.order_utils import get_saved_address_list, create_new_cart
 from sqlalchemy import text, bindparam
@@ -17,6 +18,11 @@ bp = Blueprint(
 @bp.route("/")
 @login_required
 def index():
+    cart = ShoppingCart.query.filter_by(auth_user_id=current_user.id).order_by(ShoppingCart.timestamp.desc()).first()
+    cart_items = CartItem.query.filter_by(shopping_cart_id=cart.id).all()
+    if len(cart_items) == 0:
+        flash("Your cart is empty!")
+        return redirect("/cart")
     saved_address_list = get_saved_address_list(current_user.id)
     delivery_methods = db.session.query(DeliveryMethod).all()
     return render_template(
@@ -29,7 +35,14 @@ def index():
 @bp.route("/submit_order", methods=["POST"])
 @login_required
 def submit_order():
-    if not request.form.get("use_saved_address", None) == "on":
+    cart = ShoppingCart.query.filter_by(auth_user_id=current_user.id).order_by(ShoppingCart.timestamp.desc()).first()
+    cart_items = CartItem.query.filter_by(shopping_cart_id=cart.id).all()
+    if len(cart_items) == 0:
+        flash("Your cart is empty!")
+        return redirect("/cart")
+    address_from_history = request.form["address_from_history"]
+    logging.info(f"address_from_history: {address_from_history}")
+    if not address_from_history:
         street = request.form["street"]
         city = request.form["city"]
         country = request.form["country"]
