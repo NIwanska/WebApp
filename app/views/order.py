@@ -47,16 +47,12 @@ def submit_order():
         address_id = request.form["saved_address_select"]
         address = Address.query.filter_by(id=address_id).first()
 
-    cart = (
-        ShoppingCart.query.filter_by(auth_user_id=current_user.id)
-        .order_by(ShoppingCart.timestamp.desc())
-        .first()
-    )
+    cart = ShoppingCart.query.filter_by(auth_user_id=current_user.id).order_by(ShoppingCart.timestamp.desc()).first()
 
     if cart.total is None:
         flash("Your cart is empty!")
         return redirect("/cart")
-    
+
     # Check if any items in the cart are out of stock
     cart_items = CartItem.query.filter_by(shopping_cart_id=cart.id).all()
     out_of_stock_items = []
@@ -71,9 +67,10 @@ def submit_order():
         return redirect("/cart")
 
     delivery_method_id = request.form["delivery_method_id"]
+    delivery_method = DeliveryMethod.query.filter_by(id=delivery_method_id).first()
     order_status_id = 1
     datetime_val = datetime.datetime.now()
-    total = cart.total
+    total = cart.total + delivery_method.price
     order = Order(
         address_id=address.id,
         cart_id=cart.id,
@@ -92,10 +89,10 @@ def submit_order():
     p_year = datetime_val.year
     stmt_city = text("CALL city_reports(:p_city, :p_month, :p_year, :p_total)")
     stmt_city = stmt_city.bindparams(
-        bindparam('p_city', value=p_city),
-        bindparam('p_month', value=p_month),
-        bindparam('p_year', value=p_year),
-        bindparam('p_total', value=total)
+        bindparam("p_city", value=p_city),
+        bindparam("p_month", value=p_month),
+        bindparam("p_year", value=p_year),
+        bindparam("p_total", value=total),
     )
 
     db.session.execute(stmt_city)
@@ -106,10 +103,10 @@ def submit_order():
         product_id = cart_item.product_item_id
         stmt_prod = text("CALL product_reports(:p_product_id, :p_month, :p_year, :p_count)")
         stmt_prod = stmt_prod.bindparams(
-            bindparam('p_product_id', value=product_id),
-            bindparam('p_month', value=p_month),
-            bindparam('p_year', value=p_year),
-            bindparam('p_count', value=cart_item.quantity)
+            bindparam("p_product_id", value=product_id),
+            bindparam("p_month", value=p_month),
+            bindparam("p_year", value=p_year),
+            bindparam("p_count", value=cart_item.quantity),
         )
         db.session.execute(stmt_prod)
     db.session.commit()
