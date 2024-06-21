@@ -1,6 +1,8 @@
 from sqlalchemy import event
 from sqlalchemy.orm import Session
-from .models import db, CartItem, Order
+from .models import ShoppingCart, CartItem, Order, Invoice, db
+from sqlalchemy import text, bindparam
+import datetime
 import logging
 
 logging.basicConfig(level=logging.INFO)
@@ -67,27 +69,20 @@ def decrease_stock_number(connection, order_id):
         logger.info(f"Decreased stock for product_item_id {item.product_item_id} by {item.quantity}")
 
 
-def create_invoice(connection, order_id):
-    order = connection.execute(
-        db.text("""
-            SELECT id, total, datetime
-            FROM "order"
-            WHERE id = :order_id
-        """),
-        {"order_id": order_id}
-    ).fetchone()
-    
-    connection.execute(
-        db.text("""
-            INSERT INTO invoice (total, datetime, order_id)
-            VALUES (:total, :datetime, :order_id)
-        """),
-        {"total": order.total, "datetime": order.datetime, "order_id": order.id}
-    )
-    logger.info(f"Invoice created for order_id {order_id} with total {order.total}")
-
 @event.listens_for(Order, 'after_insert')
-def after_order_insert(mapper, connection, target):
-    logger.info(f"Order created with id: {target.id}")
-    decrease_stock_number(connection, target.id)
-    create_invoice(connection, target.id)
+def create_invoice_after_order_insert(mapper, connection, target):
+    connection.execute(
+        Invoice.__table__.insert().values(
+            total=target.total,
+            order_id=target.id
+        )
+    )
+    datetime_val = datetime.datetime.now()
+    stmt_invoice = text("CALL invoice_reports(:p_month, :p_year, :p_total)")
+    stmt_invoice = stmt_invoice.bindparams(
+        bindparam('p_month', value=str(datetime_val.month)),
+        # bindparam('p_month', value='7'),
+        bindparam('p_year', value=datetime_val.year),
+        bindparam('p_total', value=target.total)
+    )
+    connection.execute(stmt_invoice)
