@@ -15,7 +15,7 @@ def get_saved_address_list(current_user_id: int):
 
 def create_new_cart(current_user_id: id):
 
-    cart = ShoppingCart(auth_user_id=current_user_id, timestamp=datetime.datetime.now())
+    cart = ShoppingCart(auth_user_id=current_user_id, timestamp=datetime.datetime.now(), total=0.0)
     db.session.add(cart)
     db.session.commit()
     return cart

@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint
+from flask import render_template, Blueprint, request, redirect, url_for, flash
 from flask_login import login_required, current_user
 from ..models import CartItem, ShoppingCart, db, ProductItem, ProductType, Size
 
@@ -26,6 +26,8 @@ def cart_detail():
             ProductType.name.label("product_name"),
             ProductType.price,
             ProductType.img_url,
+            CartItem.id.label("cart_item_id"),
+            ProductType.id.label("product_id"),
             Size.name.label("size_name"),
         )
         .join(ProductItem, ProductItem.id == CartItem.product_item_id)
@@ -35,3 +37,22 @@ def cart_detail():
         .all()
     )
     return render_template("cart/cart_items_list.html", cart_items=cart_items, cart=cart)
+
+
+@bp.route('/remove_from_cart', methods=['POST'])
+def remove_from_cart():
+
+    cart_item_id = request.form.get("cart_item_id")
+    cart_item = CartItem.query.filter_by(id=cart_item_id).first()
+    
+    if cart_item:
+        if cart_item.quantity > 1:
+            cart_item.quantity -= 1
+        else:
+            db.session.delete(cart_item)
+        db.session.commit()
+        flash("Product removed from cart", "success")
+    else:
+        flash("Product not found in cart", "danger")
+
+    return redirect(url_for("cart.cart_detail"))
