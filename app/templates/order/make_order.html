@@ -48,7 +48,7 @@
                 <label for="deliveryMethod" class="form-label">Delivery Method:</label>
                 <select name="delivery_method_id" class="form-select" id="deliveryMethod">
                     {% for delivery in delivery_methods %}
-                        <option value="{{delivery.id}}">{{delivery.name}}</option>
+                        <option value="{{delivery.id}}">{{delivery.name}} {{delivery.price}}$ </option>
                     {% endfor %}
                 </select>
             </div>
