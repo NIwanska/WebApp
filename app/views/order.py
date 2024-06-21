@@ -104,13 +104,12 @@ def submit_order():
 
     for cart_item in cart_items:
         product_id = cart_item.product_item_id
-        stmt_prod = text("CALL product_reports(:p_product_id, :p_month, :p_year, :p_count, :p_total)")
+        stmt_prod = text("CALL product_reports(:p_product_id, :p_month, :p_year, :p_count)")
         stmt_prod = stmt_prod.bindparams(
             bindparam('p_product_id', value=product_id),
             bindparam('p_month', value=p_month),
             bindparam('p_year', value=p_year),
-            bindparam('p_count', value=int(cart_item.quantity)),
-            bindparam('p_total', value=total)
+            bindparam('p_count', value=cart_item.quantity)
         )
         db.session.execute(stmt_prod)
     db.session.commit()
