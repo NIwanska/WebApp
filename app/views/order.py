@@ -1,6 +1,7 @@
 from flask import render_template, Blueprint, request, flash, redirect
 from ..models import Address, db, ShoppingCart, Order, AuthUser, DeliveryMethod, CartItem, ProductItem
 from flask_login import login_required, current_user
+import logging
 import datetime
 from ..utils.order_utils import get_saved_address_list, create_new_cart
 from sqlalchemy import text, bindparam
@@ -17,6 +18,11 @@ bp = Blueprint(
 @bp.route("/")
 @login_required
 def index():
+    cart = ShoppingCart.query.filter_by(auth_user_id=current_user.id).order_by(ShoppingCart.timestamp.desc()).first()
+    cart_items = CartItem.query.filter_by(shopping_cart_id=cart.id).all()
+    if len(cart_items) == 0:
+        flash("Your cart is empty!")
+        return redirect("/cart")
     saved_address_list = get_saved_address_list(current_user.id)
     delivery_methods = db.session.query(DeliveryMethod).all()
     return render_template(
@@ -29,7 +35,14 @@ def index():
 @bp.route("/submit_order", methods=["POST"])
 @login_required
 def submit_order():
-    if not request.form.get("use_saved_address", None) == "on":
+    cart = ShoppingCart.query.filter_by(auth_user_id=current_user.id).order_by(ShoppingCart.timestamp.desc()).first()
+    cart_items = CartItem.query.filter_by(shopping_cart_id=cart.id).all()
+    if len(cart_items) == 0:
+        flash("Your cart is empty!")
+        return redirect("/cart")
+    address_from_history = request.form["address_from_history"]
+    logging.info(f"address_from_history: {address_from_history}")
+    if not address_from_history:
         street = request.form["street"]
         city = request.form["city"]
         country = request.form["country"]
@@ -47,16 +60,12 @@ def submit_order():
         address_id = request.form["saved_address_select"]
         address = Address.query.filter_by(id=address_id).first()
 
-    cart = (
-        ShoppingCart.query.filter_by(auth_user_id=current_user.id)
-        .order_by(ShoppingCart.timestamp.desc())
-        .first()
-    )
+    cart = ShoppingCart.query.filter_by(auth_user_id=current_user.id).order_by(ShoppingCart.timestamp.desc()).first()
 
     if cart.total is None:
         flash("Your cart is empty!")
         return redirect("/cart")
-    
+
     # Check if any items in the cart are out of stock
     cart_items = CartItem.query.filter_by(shopping_cart_id=cart.id).all()
     out_of_stock_items = []
@@ -71,9 +80,10 @@ def submit_order():
         return redirect("/cart")
 
     delivery_method_id = request.form["delivery_method_id"]
+    delivery_method = DeliveryMethod.query.filter_by(id=delivery_method_id).first()
     order_status_id = 1
     datetime_val = datetime.datetime.now()
-    total = cart.total
+    total = cart.total + delivery_method.price
     order = Order(
         address_id=address.id,
         cart_id=cart.id,
@@ -92,10 +102,10 @@ def submit_order():
     p_year = datetime_val.year
     stmt_city = text("CALL city_reports(:p_city, :p_month, :p_year, :p_total)")
     stmt_city = stmt_city.bindparams(
-        bindparam('p_city', value=p_city),
-        bindparam('p_month', value=p_month),
-        bindparam('p_year', value=p_year),
-        bindparam('p_total', value=total)
+        bindparam("p_city", value=p_city),
+        bindparam("p_month", value=p_month),
+        bindparam("p_year", value=p_year),
+        bindparam("p_total", value=total),
     )
 
     db.session.execute(stmt_city)
@@ -106,10 +116,10 @@ def submit_order():
         product_id = cart_item.product_item_id
         stmt_prod = text("CALL product_reports(:p_product_id, :p_month, :p_year, :p_count)")
         stmt_prod = stmt_prod.bindparams(
-            bindparam('p_product_id', value=product_id),
-            bindparam('p_month', value=p_month),
-            bindparam('p_year', value=p_year),
-            bindparam('p_count', value=cart_item.quantity)
+            bindparam("p_product_id", value=product_id),
+            bindparam("p_month", value=p_month),
+            bindparam("p_year", value=p_year),
+            bindparam("p_count", value=cart_item.quantity),
         )
         db.session.execute(stmt_prod)
     db.session.commit()
