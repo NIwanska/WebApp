@@ -120,6 +120,16 @@ class Order(db.Model):
     invoice = db.relationship("Invoice", backref="order")
     cart_id = db.Column(db.Integer, db.ForeignKey("cart.id", ondelete="SET NULL"))
 
+    def update_stock(self):
+        for cart_item in self.cart.cart_item:
+            product_item = ProductItem.filter_by(id=cart_item.product_item_id).first()
+
+            if product_item.stock_number - cart_item.quantity < 0:
+                raise ValueError("Not enough stock")
+            product_item.stock_number -= cart_item.quantity
+            product_item.timestamp = datetime.datetime.utcnow()
+            product_item.save()
+
 
 class DeliveryMethod(db.Model):
     __tablename__ = "delivery_method"
