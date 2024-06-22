@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint, request, flash, redirect
+from flask import render_template, Blueprint, request, flash, redirect, url_for
 from ..models import Address, db, ShoppingCart, Order, AuthUser, DeliveryMethod, CartItem, ProductItem
 from flask_login import login_required, current_user
 import logging
@@ -37,12 +37,18 @@ def index():
 def submit_order():
     cart = ShoppingCart.query.filter_by(auth_user_id=current_user.id).order_by(ShoppingCart.timestamp.desc()).first()
     cart_items = CartItem.query.filter_by(shopping_cart_id=cart.id).all()
+
     if len(cart_items) == 0:
         flash("Your cart is empty!")
         return redirect("/cart")
-    address_from_history = request.form["address_from_history"]
+    address_from_history = True if request.form["address_from_history"] == "true" else False
     logging.info(f"address_from_history: {address_from_history}")
-    if not address_from_history:
+
+    if address_from_history is True:
+        logging.info("address_from_history is True")
+        address_id = request.form["saved_address_select"]
+        address = Address.query.filter_by(id=address_id).first()
+    else:
         street = request.form["street"]
         city = request.form["city"]
         country = request.form["country"]
@@ -56,9 +62,6 @@ def submit_order():
 
         db.session.add(address)
         db.session.commit()
-    else:
-        address_id = request.form["saved_address_select"]
-        address = Address.query.filter_by(id=address_id).first()
 
     cart = ShoppingCart.query.filter_by(auth_user_id=current_user.id).order_by(ShoppingCart.timestamp.desc()).first()
 
@@ -124,10 +127,12 @@ def submit_order():
         db.session.execute(stmt_prod)
     db.session.commit()
 
-    return redirect("/order/success")
+    return redirect(url_for("order.success", order_id=order.id))
 
 
 @bp.route("/success", methods=["GET"])
 @login_required
 def success():
-    return render_template("order/success.html")
+    order_id = request.args.get("order_id")
+    order = Order.query.filter_by(id=order_id).first()
+    return render_template("order/success.html", order=order)
