@@ -13,7 +13,9 @@ def app():
     })
 
     with app.app_context():
-        db.create_all()
+        user = AuthUser(id = 100000, username='testuser', password='password', email='test@example.com')
+        db.session.add(user)
+        db.session.commit()
 
     yield app
 
@@ -33,9 +35,9 @@ def session(app):
 
         options = dict(bind=connection)
         session = db._make_scoped_session(options=options)
-
+        session.no_autoflush
         db.session = session
-
+        
         yield session
 
         transaction.rollback()

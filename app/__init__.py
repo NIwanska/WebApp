@@ -40,6 +40,33 @@ def create_app(test_mode = False):
     app.register_blueprint(order.bp)
     app.register_blueprint(orders.bp)
     app.jinja_env.globals.update(max=max, min=min)
+
+    # create_view_sql = """
+    # CREATE VIEW denormalized_cart_items AS
+    # SELECT 
+    #     ci.id AS cart_item_id,
+    #     ci.quantity,
+    #     pt.name AS product_name,
+    #     pt.price,
+    #     pt.img_url,
+    #     s.name AS size_name,
+    #     ci.shopping_cart_id,
+    #     sc.auth_user_id
+    # FROM 
+    #     cart_item ci
+    # JOIN 
+    #     product_item pi ON pi.id = ci.product_item_id
+    # JOIN 
+    #     product_type pt ON pt.id = pi.product_type_id
+    # JOIN 
+    #     size s ON s.id = pi.size_id
+    # JOIN 
+    #     shopping_cart sc ON sc.id = ci.shopping_cart_id;
+    # """
+
+    # with app.app_context():
+    #     with db.engine.connect() as connection:
+    #         connection.execute(create_view_sql)
     
 
     return app
