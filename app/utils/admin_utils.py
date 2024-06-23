@@ -1,10 +1,16 @@
-from ..models import Address, db, ProductMonthlyReports, ProductType, ProductItem, ProductCategory, CityMonthlyReports
+from ..models import Address, db, ProductMonthlyReports, ProductType, ProductItem, ProductCategory, CityMonthlyReports, InvoiceMonthlyReports
 import datetime
 import matplotlib.pyplot as plt
 import numpy as np
 from sqlalchemy import func
 from matplotlib.ticker import MaxNLocator
 
+
+def admin_records():
+        return (
+            db.session.query(
+                func.min(InvoiceMonthlyReports.year)
+            ).scalar())
 
 def products_monthly_reports_hist(year, months, months_names):
     # for month in months:
@@ -91,15 +97,25 @@ def cities_monthly_reports_hist(year, months, months_names):
         plt.savefig(f"./app/static/figures/cities/cities_monthly_reports_hist_{month_name}")
 
 
-def invoices_monthly_reports_hist(months):
-    db.session.query(ProductMonthlyReports)
-
-    for month in months:
-        np.random.seed(1)
-        x = 3 + np.random.normal(0, 1.5, 200)
-        fig, ax = plt.subplots()
-        ax.hist(x, bins=8, linewidth=0.5, edgecolor="white")
-        ax.set(xlim=(0, 8), xticks=np.arange(1, 8),
-            ylim=(0, 56), yticks=np.linspace(0, 56, 9))
-        plt.savefig(f"./app/static/figures/invoices/invoices_monthly_reports_hist_{month}")
-
+def invoices_monthly_reports_hist(year, months, months_names):
+    results = db.session.query(
+        InvoiceMonthlyReports.month,
+        func.sum(InvoiceMonthlyReports.total)
+    ).filter(InvoiceMonthlyReports.year == year
+    ).group_by(InvoiceMonthlyReports.month).all()
+    
+    month_totals = {month: 0 for month in months}
+    for month, total in results:
+        month_totals[month] = total
+    
+    months = list(month_totals.keys())
+    totals = list(month_totals.values())
+    
+    plt.figure(figsize=(8, 6))
+    plt.bar(months, totals)
+    plt.xlabel('Month')
+    plt.ylabel('Total Profit')
+    plt.title(f'Monthly Profits for the Year {year}')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.savefig(f"./app/static/figures/invoices/invoices_monthly_reports_hist")
