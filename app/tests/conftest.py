@@ -11,52 +11,41 @@ from app.models import (Size, SizeType, ProductType, ProductCategory, ProductIte
                           Order, DeliveryMethod, OrderStatus, Address, Invoice, CityMonthlyReports, 
                           InvoiceMonthlyReports, ProductMonthlyReports)
 
-@pytest.fixture(scope='module')
-def test_client():
-    flask_app = create_app()  # Assumes you have a `testing` config
-    testing_client = flask_app.test_client()
+@pytest.fixture(scope='session')
+def app():
+    app = create_app()
+    app.config.update({
+        "TESTING": True,
+        "SQLALCHEMY_DATABASE_URI": 'sqlite:///:memory:'
+    })
 
-    with flask_app.app_context():
+    with app.app_context():
         db.create_all()
 
-        # Create a test user
-        user = AuthUser(username='testuser', password='password', email='test@example.com')
-        db.session.add(user)
-        db.session.commit()
+    yield app
 
-        yield testing_client  # this is where the testing happens!
-
+    with app.app_context():
         db.drop_all()
-        db.session.remove()
 
-# @pytest.fixture(scope='module')
-# def init_database():
-#     # Initialize the database with some data
-#     with create_app().app_context():
-#         db.create_all()
+@pytest.fixture(scope='session')
+def test_client(app):
+    return app.test_client()
 
-#         # Create necessary objects for testing
-#         size_type = SizeType(name='Clothing')
-#         db.session.add(size_type)
-#         db.session.commit()
+@pytest.fixture(scope='function', autouse=True)
+def session(app):
+    with app.app_context():
 
-#         size = Size(name='Medium', size_type_id=size_type.id)
-#         db.session.add(size)
-#         db.session.commit()
+        connection = db.engine.connect()
+        transaction = connection.begin()
 
-#         category = ProductCategory(subcategory_name='Shirts', category_name='Clothing', size_type_id=size_type.id)
-#         db.session.add(category)
-#         db.session.commit()
+        options = dict(bind=connection)
+        session = db._make_scoped_session(options=options)
 
-#         product_type = ProductType(name='T-shirt', color='Red', price=19.99, img_url='http://example.com/tshirt.png', product_category_id=category.id)
-#         db.session.add(product_type)
-#         db.session.commit()
+        db.session = session
 
-#         product_item = ProductItem(stock_number=10, size_id=size.id, product_type_id=product_type.id)
-#         db.session.add(product_item)
-#         db.session.commit()
+        yield session
 
-#         db.session.commit()
-#         yield db
+        transaction.rollback()
+        connection.close()
+        session.remove()
 
-#         db.drop_all()

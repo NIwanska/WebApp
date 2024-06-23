@@ -22,11 +22,11 @@ from flask_sqlalchemy import SQLAlchemy
 #     print("Db created")
 
 def test_size(test_client):
-    size_type = SizeType(name='Clothing')
+    size_type = SizeType(id = 100000, name='Clothing')
     db.session.add(size_type)
     db.session.commit()
 
-    size = Size(name='Medium', size_type_id=size_type.id)
+    size = Size(id = 100000, name='Medium', size_type_id=size_type.id)
     db.session.add(size)
     db.session.commit()
 
@@ -34,12 +34,16 @@ def test_size(test_client):
     assert size.name == 'Medium'
     assert size.size_type_id == size_type.id
 
+    # db.session.delete(size)
+    # db.session.delete(size_type)
+    # db.session.commit()
+
 def test_product_type(test_client):
-    category = ProductCategory(subcategory_name='Shirts', category_name='Clothing', size_type_id=1)
+    category = ProductCategory(id = 100000, subcategory_name='Shirts', category_name='Clothing', size_type_id=1)
     db.session.add(category)
     db.session.commit()
 
-    product_type = ProductType(name='T-shirt', color='Red', price=19.99, img_url='http://example.com/tshirt.png', product_category_id=category.id)
+    product_type = ProductType(id = 100000, name='T-shirt', color='Red', price=19.99, img_url='http://example.com/tshirt.png', product_category_id=category.id)
     db.session.add(product_type)
     db.session.commit()
 
@@ -51,15 +55,15 @@ def test_product_type(test_client):
     assert product_type.product_category_id == category.id
 
 def test_product_item(test_client):
-    size = Size(name='Large', size_type_id=1)
+    size = Size(id = 100001, name='Large', size_type_id=1)
     db.session.add(size)
     db.session.commit()
 
-    product_type = ProductType(name='Hoodie', color='Blue', price=39.99, img_url='http://example.com/hoodie.png', product_category_id=1)
+    product_type = ProductType(id = 100001, name='Hoodie', color='Blue', price=39.99, img_url='http://example.com/hoodie.png', product_category_id=1)
     db.session.add(product_type)
     db.session.commit()
 
-    product_item = ProductItem(stock_number=50, size_id=size.id, product_type_id=product_type.id)
+    product_item = ProductItem(id = 100001, stock_number=50, size_id=size.id, product_type_id=product_type.id)
     db.session.add(product_item)
     db.session.commit()
 
@@ -69,19 +73,19 @@ def test_product_item(test_client):
     assert product_item.product_type_id == product_type.id
 
 def test_cart_item(test_client):
-    auth_user = AuthUser(username='testuser', password='password', email='test@example.com')
+    auth_user = AuthUser(id = 100002, username='testuser1', password='password', email='test1@example.com')
     db.session.add(auth_user)
     db.session.commit()
 
-    cart = ShoppingCart(auth_user_id=auth_user.id)
+    cart = ShoppingCart(id = 100002, auth_user_id=auth_user.id)
     db.session.add(cart)
     db.session.commit()
 
-    product_item = ProductItem(stock_number=100, size_id=1, product_type_id=1)
+    product_item = ProductItem(id = 100002, stock_number=100, size_id=1, product_type_id=100001)
     db.session.add(product_item)
     db.session.commit()
 
-    cart_item = CartItem(shopping_cart_id=cart.id, quantity=2, product_item_id=product_item.id)
+    cart_item = CartItem(id = 100002, shopping_cart_id=cart.id, quantity=2, product_item_id=product_item.id)
     db.session.add(cart_item)
     db.session.commit()
 
@@ -91,23 +95,23 @@ def test_cart_item(test_client):
     assert cart_item.product_item_id == product_item.id
 
 def test_order(test_client):
-    delivery_method = DeliveryMethod(name='Express', price=9.99)
+    delivery_method = DeliveryMethod(id = 100003, name='Express', price=9.99)
     db.session.add(delivery_method)
     db.session.commit()
 
-    order_status = OrderStatus(name='Pending')
+    order_status = OrderStatus(id = 100003, name='Pending')
     db.session.add(order_status)
     db.session.commit()
 
-    address = Address(street='123 Main St', city='Hometown', country='Country', zip_code='12345')
+    address = Address(id = 100003, street='123 Main St', city='Hometown', country='Country', zip_code='12345')
     db.session.add(address)
     db.session.commit()
 
-    cart = ShoppingCart(auth_user_id=1)
+    cart = ShoppingCart(id = 100003, auth_user_id=100002)
     db.session.add(cart)
     db.session.commit()
 
-    order = Order(total=49.99, cart_id=cart.id, delivery_method_id=delivery_method.id, order_status_id=order_status.id, address_id=address.id)
+    order = Order(id = 100003, total=49.99, cart_id=cart.id, delivery_method_id=delivery_method.id, order_status_id=order_status.id, address_id=address.id)
     db.session.add(order)
     db.session.commit()
 
@@ -119,11 +123,11 @@ def test_order(test_client):
     assert order.address_id == address.id
 
 def test_invoice(test_client):
-    order = Order(total=49.99, cart_id=1, delivery_method_id=1, order_status_id=1, address_id=1)
+    order = Order(id = 100004, total=49.99, cart_id=100002, delivery_method_id=1, order_status_id=1, address_id=100003)
     db.session.add(order)
     db.session.commit()
 
-    invoice = Invoice(total=49.99, order_id=order.id)
+    invoice = Invoice(id = 100004, total=49.99, order_id=order.id)
     db.session.add(invoice)
     db.session.commit()
 
@@ -131,8 +135,8 @@ def test_invoice(test_client):
     assert invoice.total == 49.99
     assert invoice.order_id == order.id
 
-def test_reports(test_client):
-    city_report = CityMonthlyReports(city='New York', month='January', year=2023, count=100, total=5000.0)
+def test_reports_city(test_client):
+    city_report = CityMonthlyReports(id = 100005, city='New York', month='January', year=2023, count=100, total=5000.0)
     db.session.add(city_report)
     db.session.commit()
 
@@ -143,7 +147,9 @@ def test_reports(test_client):
     assert city_report.count == 100
     assert city_report.total == 5000.0
 
-    invoice_report = InvoiceMonthlyReports(month='January', year=2023, count=50, total=2500.0)
+def test_reports_invoice(test_client):
+
+    invoice_report = InvoiceMonthlyReports(id = 100005, month='January', year=2023, count=50, total=2500.0)
     db.session.add(invoice_report)
     db.session.commit()
 
@@ -153,7 +159,8 @@ def test_reports(test_client):
     assert invoice_report.count == 50
     assert invoice_report.total == 2500.0
 
-    product_report = ProductMonthlyReports(product_item_id=1, month='January', year=2023, count=20, total=1000.0)
+def test_reports_product(test_client):
+    product_report = ProductMonthlyReports(id = 100005, product_item_id=1, month='January', year=2023, count=20, total=1000.0)
     db.session.add(product_report)
     db.session.commit()
 
