@@ -1,7 +1,7 @@
-from flask import render_template, Blueprint, request, redirect, url_for, flash
-from flask_login import login_required, current_user
-from ..models import CartItem, ShoppingCart, db, ProductItem, ProductType, Size
-from sqlalchemy import text, bindparam
+from flask import Blueprint, request, redirect, url_for, flash
+from flask_login import login_required
+from ..models import CartItem, db
+
 
 bp = Blueprint(
     "cart",

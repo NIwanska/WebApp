@@ -1,8 +1,7 @@
 import pytest
 from app.__init__ import *
-from app.models import (Size, SizeType, ProductType, ProductCategory, ProductItem, CartItem, ShoppingCart, AuthUser, 
-                          Order, DeliveryMethod, OrderStatus, Address, Invoice, CityMonthlyReports, 
-                          InvoiceMonthlyReports, ProductMonthlyReports)
+from app.models import AuthUser
+                    
 
 @pytest.fixture(scope='session')
 def app():
