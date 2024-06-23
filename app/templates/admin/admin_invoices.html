@@ -21,8 +21,14 @@
 
     <section>
         <h2>Invoice statistics</h2>
+        {% if is_info %}
         <img src="{{ url_for('static', filename='figures/invoices/invoices_monthly_reports_hist.png') }}"/>
 
+        {% else %}
+        <div class="month-statistics">
+            <h2>No information</h2>
+        </div>
+        {% endif %}
         <!-- <div id="invoices-slider" class="slider">
             <div class="slides">
                 <button class="prev compare-button" onclick="prevSlide('invoices-slider')">&#10094;</button>
