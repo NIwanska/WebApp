@@ -1,25 +1,9 @@
 import pytest
-from datetime import datetime
-# from flask import Flask
-# from flask_migrate import Migrate
-# from ..config import Config
-# from ..database import db
 from app.models import db
 from app.models import (Size, SizeType, ProductType, ProductCategory, ProductItem, CartItem, ShoppingCart, AuthUser, 
                           Order, DeliveryMethod, OrderStatus, Address, Invoice, CityMonthlyReports, 
                           InvoiceMonthlyReports, ProductMonthlyReports)
 from flask_sqlalchemy import SQLAlchemy
-
-# db = SQLAlchemy()
-
-# app = Flask(__name__)
-# app.config.from_object(Config())
-# migrate = Migrate(app, db)
-# db.init_app(app)
-
-# with app.app_context():
-#     db.create_all()
-#     print("Db created")
 
 def test_size(test_client):
     size_type = SizeType(id = 100000, name='Clothing')
@@ -34,9 +18,6 @@ def test_size(test_client):
     assert size.name == 'Medium'
     assert size.size_type_id == size_type.id
 
-    # db.session.delete(size)
-    # db.session.delete(size_type)
-    # db.session.commit()
 
 def test_product_type(test_client):
     category = ProductCategory(id = 100000, subcategory_name='Shirts', category_name='Clothing', size_type_id=1)

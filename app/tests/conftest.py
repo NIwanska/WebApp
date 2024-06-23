@@ -1,12 +1,5 @@
 import pytest
-# import sys
-# import os
-
-# Add the root directory of the project to the Python path
-# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-# from ..__init__ import create_app, db
 from app.__init__ import *
-# import __init__ as init
 from app.models import (Size, SizeType, ProductType, ProductCategory, ProductItem, CartItem, ShoppingCart, AuthUser, 
                           Order, DeliveryMethod, OrderStatus, Address, Invoice, CityMonthlyReports, 
                           InvoiceMonthlyReports, ProductMonthlyReports)
