@@ -3,6 +3,7 @@ from .database import db
 from flask_login import UserMixin
 
 
+
 class Size(db.Model):
     __tablename__ = "size"
 
@@ -192,14 +193,43 @@ class ProductMonthlyReports(db.Model):
     count = db.Column(db.Integer, nullable=False)
     total = db.Column(db.Float, nullable=False)
 
-class DenormalizedCartItem(db.Model):
-    __tablename__ = 'denormalized_cart_items'
+# class DenormalizedCartItem(db.Model):
+#     __tablename__ = 'denormalized_cart_items'
     
-    cart_item_id = db.Column(db.Integer, primary_key=True)
-    quantity = db.Column(db.Integer)
-    product_name = db.Column(db.String)
-    price = db.Column(db.Float)
-    img_url = db.Column(db.String)
-    size_name = db.Column(db.String)
-    shopping_cart_id = db.Column(db.Integer)
-    auth_user_id = db.Column(db.Integer)
+#     cart_item_id = db.Column(db.Integer, primary_key=True, nullable=False, autoincrement=True)
+#     quantity = db.Column(db.Integer, nullable=False, server_default="1")
+#     product_name = db.Column(db.String(120))
+#     price = db.Column(db.Float, nullable=False, server_default="0.0")
+#     img_url = db.Column(db.String(200), unique=True)
+#     size_name = db.Column(db.String)
+#     shopping_cart_id = db.Column(db.Integer)
+#     auth_user_id = db.Column(db.Integer)
+
+
+
+# class CartItemsView(View):
+#     def dispatch_request(self):
+#         art = ShoppingCart.query.filter_by(auth_user_id=current_user.id).order_by(ShoppingCart.timestamp.desc()).first()
+#         if cart is None:
+#             cart = ShoppingCart(auth_user_id=current_user.id, total=0)
+#             db.session.add(cart)
+#             db.session.commit()
+#         cart_items = (
+#         db.session.query(
+#             CartItem,
+#             CartItem.quantity,
+#             ProductType.name.label("product_name"),
+#             ProductType.price,
+#             ProductType.img_url,
+#             CartItem.id.label("cart_item_id"),
+#             ProductType.id.label("product_id"),
+#             Size.name.label("size_name"),
+#         )
+#         .join(ProductItem, ProductItem.id == CartItem.product_item_id)
+#         .join(ProductType, ProductType.id == ProductItem.product_type_id)
+#         .join(Size, Size.id == ProductItem.size_id)
+#         .filter((CartItem.product_item_id == ProductItem.id) & (CartItem.shopping_cart_id == cart.id))
+#         .all()
+#     )
+#         return cart_items
+        
