@@ -96,6 +96,7 @@
     font-weight: 1000;
 }
 
+
 .month-name {
     font-size: 30px;
     margin: 0px;
@@ -125,3 +126,10 @@
     align-items: center;
 }
 
+.no-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    padding: 30px;
+}

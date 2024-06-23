@@ -28,7 +28,11 @@
                 {% for month in months %}
                 <div class="month-statistics">
                     <div class="month-name">{{month}}</div>
+                    {% if is_info[month] %}
                     <img src="{{ url_for('static', filename='figures/cities/cities_monthly_reports_hist_' ~ month ~ '.png') }}"/>
+                    {% else %}
+                    <div class="no-info">No information</div>
+                    {% endif %}
                 </div>
                 {% endfor %}
                 <button class="next compare-button" onclick="nextSlide('cities-slider')">&#10097;</button>
