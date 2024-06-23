@@ -1,5 +1,5 @@
 from flask import Flask
-from .config import Config
+from .config import Config, ConfigTest
 from .views import main, cart, products, order, auth, orders
 from .database import db
 from flask_migrate import Migrate
@@ -11,9 +11,12 @@ import app.db_events
 login_manager = LoginManager()
 
 
-def create_app():
+def create_app(test_mode = False):
     app = Flask(__name__)
-    app.config.from_object(Config())
+    if test_mode is True:
+        app.config.from_object(ConfigTest())
+    else:
+        app.config.from_object(Config())
     migrate = Migrate(app, db)
     db.init_app(app)
 

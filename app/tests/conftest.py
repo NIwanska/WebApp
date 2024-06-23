@@ -6,7 +6,7 @@ from app.models import (Size, SizeType, ProductType, ProductCategory, ProductIte
 
 @pytest.fixture(scope='session')
 def app():
-    app = create_app()
+    app = create_app(test_mode=True)
     app.config.update({
         "TESTING": True,
         "SQLALCHEMY_DATABASE_URI": 'sqlite:///:memory:'
