@@ -29,7 +29,12 @@
                 {% for month in months %}
                 <div class="month-statistics">
                     <div class="month-name">{{month}}</div>
+                    {% if is_info_products[month] %}
                     <img src="{{ url_for('static', filename='figures/products/products_monthly_reports_hist_' ~ month ~ '.png') }}"/>
+                    {% else %}
+                    <div class="no-info">No information</div>
+                    {% endif %}
+
                 </div>
                 {% endfor %}
                 <button class="next compare-button" onclick="nextSlide('products-slider')">&#10095;</button>
@@ -47,7 +52,11 @@
                 {% for month in months %}
                 <div class="month-statistics">
                     <div class="month-name">{{month}}</div>
+                    {% if is_info_categories[month] %}
                     <img src="{{ url_for('static', filename='figures/products/categories_monthly_reports_pie_' ~ month ~ '.png') }}"/>
+                    {% else %}
+                    <div class="no-info">No information</div>
+                    {% endif %}
                 </div>
                 {% endfor %}
                 <button class="next compare-button" onclick="nextSlide('categories-slider')">&#10095;</button>
