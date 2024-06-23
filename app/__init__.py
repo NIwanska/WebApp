@@ -1,6 +1,6 @@
 from flask import Flask
 from .config import Config, ConfigTest
-from .views import main, cart, products, order, auth, orders
+from .views import main, cart, products, order, auth, orders, admin
 from .database import db
 from flask_migrate import Migrate
 from flask_login import LoginManager
@@ -41,7 +41,8 @@ def create_app(test_mode = False):
     app.register_blueprint(auth.bp)
     app.register_blueprint(order.bp)
     app.register_blueprint(orders.bp)
-    app.jinja_env.globals.update(max=max, min=min) 
+    app.register_blueprint(admin.bp)
+    app.jinja_env.globals.update(max=max, min=min)
 
     return app
 
