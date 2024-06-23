@@ -16,24 +16,27 @@ bp = Blueprint(
 @bp.route("/products/<int:year>/")
 def admin_view_products(year=2024):
     years = [i for i in range(1995, 2024)]
-    months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-    products_monthly_reports_hist(months)
-    products_monthly_reports_pie(months)
-    return render_template("admin/admin_products.html", years=years, months=months, year=year)
+    months = [str(i) for i in range(1, 13)]
+    months_names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    products_monthly_reports_hist(year, months, months_names)
+    products_monthly_reports_pie(year, months, months_names)
+    return render_template("admin/admin_products.html", years=years, months=months_names, year=year)
 
 @bp.route("/cities/<int:year>/")
 def admin_view_cities(year=2024):
     years = [i for i in range(1995, 2024)]
-    months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-    cities_monthly_reports_hist(months)
-    return render_template("admin/admin_cities.html", years=years, months=months, year=year)
+    months = [str(i) for i in range(1, 13)]
+    months_names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    cities_monthly_reports_hist(year, months, months_names)
+    return render_template("admin/admin_cities.html", years=years, months=months_names, year=year)
 
 @bp.route("/invoices/<int:year>/")
 def admin_view_invoices(year=2024):
-    years = [i for i in range(1995, 2024)]
-    months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-    invoices_monthly_reports_hist(months)
-    return render_template("admin/admin_invoices.html", years=years, months=months, year=year)
+    years = [str(i) for i in range(1995, 2024)]
+    months = [str(i) for i in range(1, 13)]
+    months_names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    invoices_monthly_reports_hist(year, months, months_names)
+    return render_template("admin/admin_invoices.html", years=years, months=months_names, year=year)
 
 
 
