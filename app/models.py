@@ -8,7 +8,7 @@ class Size(db.Model):
 
     id = db.Column(db.Integer, primary_key=True, nullable=False, autoincrement=True)
     name = db.Column(db.String(120), unique=True, nullable=False)
-    size_type_id = db.Column(db.Integer, db.ForeignKey("size_type.id", ondelete="CASCADE"), nullable=False)
+    size_type_id = db.Column(db.Integer, db.ForeignKey("size_type.id", ondelete="CASCADE"), nullable=False, index=True)
     product_item = db.relationship(
         "ProductItem",
         backref="size",
@@ -42,15 +42,15 @@ class ProductType(db.Model):
         backref="product_type",
         cascade="all, delete",
     )
-    product_category_id = db.Column(db.Integer, db.ForeignKey("product_category.id", ondelete="CASCADE"))
+    product_category_id = db.Column(db.Integer, db.ForeignKey("product_category.id", ondelete="CASCADE"), index=True)
 
 
 class ProductCategory(db.Model):
     __tablename__ = "product_category"
 
     id = db.Column(db.Integer, primary_key=True, nullable=False, autoincrement=True)
-    subcategory_name = db.Column(db.String(120), unique=True)
-    category_name = db.Column(db.String(120), nullable=False)
+    subcategory_name = db.Column(db.String(120), unique=True, index=True)
+    category_name = db.Column(db.String(120), nullable=False, index=True)
     product_type = db.relationship(
         "ProductType",
         backref="product_category",
@@ -64,8 +64,8 @@ class ProductItem(db.Model):
     id = db.Column(db.Integer, primary_key=True, nullable=False, autoincrement=True)
     stock_number = db.Column(db.Integer, nullable=False, server_default="0")
     timestamp = db.Column(db.DateTime, default=datetime.datetime.utcnow, nullable=False)
-    size_id = db.Column(db.Integer, db.ForeignKey("size.id", ondelete="CASCADE"), nullable=False)
-    product_type_id = db.Column(db.Integer, db.ForeignKey("product_type.id", ondelete="CASCADE"), nullable=False)
+    size_id = db.Column(db.Integer, db.ForeignKey("size.id", ondelete="CASCADE"), nullable=False, index=True)
+    product_type_id = db.Column(db.Integer, db.ForeignKey("product_type.id", ondelete="CASCADE"), nullable=False, index=True)
     cart_item = db.relationship(
         "CartItem",
         backref="product_item",
@@ -77,7 +77,7 @@ class ProductItem(db.Model):
 class CartItem(db.Model):
     __tablename__ = "cart_item"
     id = db.Column(db.Integer, primary_key=True, nullable=False, autoincrement=True)
-    shopping_cart_id = db.Column(db.Integer, db.ForeignKey("cart.id", ondelete="CASCADE"), nullable=False)
+    shopping_cart_id = db.Column(db.Integer, db.ForeignKey("cart.id", ondelete="CASCADE"), nullable=False, index=True)
     quantity = db.Column(db.Integer, nullable=False, server_default="1")
     product_item_id = db.Column(db.Integer, db.ForeignKey("product_item.id", ondelete="CASCADE"))
 
@@ -93,7 +93,7 @@ class ShoppingCart(db.Model):
         cascade="all, delete",
     )
     order = db.relationship("Order", backref="cart")
-    auth_user_id = db.Column(db.Integer, db.ForeignKey("auth_user.id", ondelete="CASCADE"), nullable=False)
+    auth_user_id = db.Column(db.Integer, db.ForeignKey("auth_user.id", ondelete="CASCADE"), nullable=False, index=True)
 
 
 class AuthUser(UserMixin, db.Model):
@@ -191,3 +191,4 @@ class ProductMonthlyReports(db.Model):
     year = db.Column(db.Integer, nullable=False)
     count = db.Column(db.Integer, nullable=False)
     total = db.Column(db.Float, nullable=False)
+
